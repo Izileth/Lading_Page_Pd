@@ -224,6 +224,7 @@ i:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
 }
 .hero h1 {
   font-size: 4.5rem;
@@ -280,6 +281,7 @@ i:hover {
     flex-direction: column;
     align-items: center;
     text-align: left;
+    overflow-x: hidden;
   }
   .hero h1 {
     font-size: 2.6rem;
@@ -303,6 +305,7 @@ i:hover {
     flex-direction: column;
     align-items: center;
     text-align: left;
+    overflow-x: hidden;
   }
   .hero h1 {
     font-size: 1.8rem;
@@ -327,6 +330,7 @@ i:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .gallery {
@@ -334,6 +338,7 @@ i:hover {
     height: max-content;
     flex-direction: column;
     text-align: left;
+    overflow-x: hidden;
   }
 }
 .gallery .gallery-content {
@@ -464,6 +469,15 @@ i:hover {
     font-size: 1rem;
   }
 }
+.gallery .grid-content .gallery-stars span {
+  font-size: 1.5rem;
+  color: #fd9c00;
+}
+@media screen and (max-width: 991px) {
+  .gallery .grid-content .gallery-stars span {
+    font-size: 1rem;
+  }
+}
 
 .about {
   padding: 1.2rem;
@@ -475,6 +489,7 @@ i:hover {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .about {
@@ -484,6 +499,7 @@ i:hover {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
+    overflow-x: hidden;
   }
 }
 .about h2 {
@@ -640,12 +656,12 @@ i:hover {
   cursor: pointer;
   transition: 0.3s;
   margin-block: 1.8rem;
-  transition: transform 0.3s, color 0.3s ease, background-color 0.3s;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
 }
 .content a:hover {
   background-color: #000000;
-  color: #f2f2f2;
-  transform: scale(1.05);
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
 }
 
 .about-content > div {
@@ -667,6 +683,7 @@ i:hover {
   align-items: center;
   text-align: center;
   gap: 1.8rem;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .highlights {
@@ -674,6 +691,7 @@ i:hover {
     height: max-content;
     width: 100%;
     flex-direction: column-reverse;
+    overflow-x: hidden;
   }
 }
 
@@ -830,6 +848,7 @@ i:hover {
   align-items: center;
   text-align: center;
   color: #f2f2f2;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .showcase {
@@ -837,6 +856,7 @@ i:hover {
     height: max-content;
     width: 100%;
     flex-direction: column;
+    overflow-x: hidden;
   }
 }
 .showcase .showcase-content {
@@ -897,12 +917,12 @@ i:hover {
   border: none;
   cursor: pointer;
   margin-block: 0.6rem;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
 }
 .showcase .showcase-content .showcase-item a:hover {
   background-color: #000000;
-  color: #f2f2f2;
-  transform: scale(1.05);
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
 }
 @media screen and (max-width: 991px) {
   .showcase .showcase-content .showcase-item {
@@ -1037,6 +1057,7 @@ i:hover {
   align-items: center;
   text-align: center;
   color: #000000;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .faq {
@@ -1044,6 +1065,7 @@ i:hover {
     height: max-content;
     width: 100%;
     flex-direction: column;
+    overflow-x: hidden;
   }
 }
 .faq .faq-header {
@@ -1108,6 +1130,7 @@ i:hover {
 .faq .faq-content .faq-item h3 {
   font-size: 2.4rem;
   color: #000000;
+  text-align: left;
   font-weight: 700;
 }
 @media screen and (max-width: 991px) {
@@ -1134,6 +1157,184 @@ i:hover {
   }
 }
 
+.testimonial {
+  padding: 1.2rem;
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 991px) {
+  .testimonial {
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+.testimonial .testimonial-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-header {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+.testimonial .testimonial-header span {
+  padding: 0.4rem 1.2rem;
+  font-size: 3.2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
+}
+.testimonial .testimonial-header span:hover {
+  background-color: #000000;
+  color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-header span {
+    font-size: 2.6rem;
+    width: 100%;
+    margin-block: 2.4rem;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+.testimonial .testimonial-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content {
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+.testimonial .testimonial-content .testimonial-item {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+.testimonial .testimonial-content .testimonial-item h3 {
+  font-size: 2.6rem;
+  color: #f2f2f2;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item h3 {
+    font-size: 1.8rem;
+  }
+}
+.testimonial .testimonial-content .testimonial-item p {
+  font-size: 1rem;
+  text-align: left;
+  width: 80%;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item p {
+    font-size: 0.9rem;
+  }
+}
+.testimonial .testimonial-content .testimonial-item span {
+  font-size: 2.8rem;
+  color: #fd9c00;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item span {
+    font-size: 2rem;
+  }
+}
+.testimonial .testimonial-content .testimonial-item .content {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  margin-inline-start: 2.4rem;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item .content {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+.testimonial .testimonial-content .testimonial-item .content .testimonial-btn {
+  width: 180px;
+  height: 50px;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
+}
+.testimonial .testimonial-content .testimonial-item .content .testimonial-btn:hover {
+  background-color: #000000;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
+}
+@media screen and (max-width: 991px) {
+  .testimonial .testimonial-content .testimonial-item .content .testimonial-btn {
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+  }
+}
+.testimonial .testimonial-content .testimonial-item .midia {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.testimonial .testimonial-content .testimonial-item .midia img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-block: 1rem;
+}
+
 .location {
   padding: 1.2rem;
   height: 70vh;
@@ -1144,6 +1345,7 @@ i:hover {
   align-items: center;
   text-align: center;
   color: #f2f2f2;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
   .location {
@@ -1151,6 +1353,7 @@ i:hover {
     height: max-content;
     width: 100%;
     flex-direction: column-reverse;
+    overflow-x: hidden;
   }
 }
 
@@ -1204,12 +1407,12 @@ i:hover {
   border: none;
   cursor: pointer;
   margin-block: 1.6rem;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
 }
 .location-content a:hover {
   background-color: #000000;
-  color: #f2f2f2;
-  transform: scale(1.05);
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
 }
 @media screen and (max-width: 991px) {
   .location-content a {

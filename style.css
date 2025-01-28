@@ -590,6 +590,8 @@ i:hover {
 
 .about-content {
   width: 100%;
+  height: -moz-max-content;
+  height: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1236,7 +1238,8 @@ i:hover {
 }
 .testimonial .testimonial-content .testimonial-item {
   width: 100%;
-  height: 65vh;
+  height: -moz-max-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1387,7 +1390,7 @@ i:hover {
   }
 }
 .location-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #f2f2f2;
   text-align: left;
 }

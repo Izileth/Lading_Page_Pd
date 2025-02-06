@@ -9,6 +9,7 @@
 header {
   width: 100%;
   background: transparent;
+  padding-top: 40px;
 }
 
 .header-content {
@@ -204,7 +205,7 @@ i:hover {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #000), url("https://images2.alphacoders.com/996/996995.jpg");
+  background-image: url("/assets/img/torta4.jpg");
   left: 0;
   top: 0;
   width: 100%;
@@ -225,6 +226,12 @@ i:hover {
   align-items: center;
   text-align: center;
   overflow-x: hidden;
+}
+.hero .hero-content {
+  max-width: 1900px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 .hero h1 {
   font-size: 4.5rem;
@@ -323,8 +330,8 @@ i:hover {
 }
 .gallery {
   padding: 1.2rem;
-  height: 100vh;
-  background-color: #000000;
+  height: auto;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -362,27 +369,27 @@ i:hover {
 .gallery .gallery-grid {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
 }
 @media screen and (max-width: 991px) {
   .gallery .gallery-grid {
     height: -moz-max-content;
     height: max-content;
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     text-align: left;
   }
 }
 .gallery .grid-item {
+  max-width: 900px;
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #000000;
-  border-radius: 12px;
+  background-color: #f8f8f8;
+  border-radius: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -403,25 +410,23 @@ i:hover {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  margin-block: 1.8rem;
-  background-position: 50% 50%;
+  padding: 2rem;
 }
 .gallery .grid-midia img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 12px;
-  transition: 0.3s;
+  transition: all 1.3s;
 }
 .gallery .grid-midia img:hover {
-  transform: scale(1.025);
+  transform: rotate(5deg);
 }
 @media screen and (max-width: 991px) {
   .gallery .grid-midia img {
-    width: 100%;
-    height: 50%;
+    width: 60%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -434,10 +439,59 @@ i:hover {
   justify-content: center;
   align-items: start;
   gap: 1rem;
+  padding: 1rem;
+}
+.gallery .grid-content .star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.gallery .grid-content .star-rating .star {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.gallery .grid-content .star-rating .star.active {
+  color: gold;
+}
+.gallery .grid-content .star-rating .rating-count {
+  font-size: 1rem;
+  margin-left: 10px;
+  color: gray;
+}
+.gallery .grid-content .salle-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.gallery .grid-content .salle-rating div {
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.gallery .grid-content .salle-rating div a {
+  background-color: #fd9c00;
+  color: #f2f2f2;
+  padding: 0.2rem 1.2rem;
+  text-decoration: none;
+  transition: 0.3s, box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+.gallery .grid-content .salle-rating div a:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 20px #f2f2f2;
+  color: #000000;
 }
 .gallery .grid-content h3 {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   color: #fd9c00;
+  text-align: left;
   font-weight: 600;
 }
 @media screen and (max-width: 991px) {
@@ -445,9 +499,20 @@ i:hover {
     font-size: 1.8rem;
   }
 }
-.gallery .grid-content p {
+.gallery .grid-content h4 {
   font-size: 1.2rem;
-  color: #f2f2f2;
+  color: #fd9c00;
+  margin-block: 0.4rem;
+  text-align: left;
+  font-weight: 600;
+}
+@media screen and (max-width: 991px) {
+  .gallery .grid-content h4 {
+    font-size: 1.2rem;
+  }
+}
+.gallery .grid-content p {
+  font-size: 1rem;
   text-align: left;
 }
 @media screen and (max-width: 991px) {
@@ -455,27 +520,28 @@ i:hover {
     font-size: 1rem;
   }
 }
-.gallery .grid-content .gallery-stars {
+.gallery .grid-content .btn-more {
   width: 100%;
-  color: #f2f2f2;
-  height: 20px;
   display: flex;
-  justify-content: start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background-color: #fd9c00;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gallery .grid-content .btn-more:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  color: #000000;
 }
 @media screen and (max-width: 991px) {
-  .gallery .grid-content .gallery-stars {
+  .gallery .grid-content .btn-more {
     font-size: 1rem;
-  }
-}
-.gallery .grid-content .gallery-stars span {
-  font-size: 1.5rem;
-  color: #fd9c00;
-}
-@media screen and (max-width: 991px) {
-  .gallery .grid-content .gallery-stars span {
-    font-size: 1rem;
+    height: 42px;
+    padding: 0.2rem 1rem;
   }
 }
 

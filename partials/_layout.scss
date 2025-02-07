@@ -159,7 +159,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @media screen and (max-width: 991px) {
         height: max-content;
@@ -170,7 +170,7 @@
 
     .gallery-content{
         width: 100%;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: row;
         flex-wrap:nowrap;
@@ -187,7 +187,7 @@
 
     .gallery-grid{
         width: 100%;
-        height: 100%;
+        height: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -253,13 +253,14 @@
         gap: 1rem;
         padding: 1rem;
 
+
+        // Ajustes nas Estrelas
         .star-rating {
             display: flex;
             align-items: center;
-            gap: 5px;
             cursor: pointer;
             .star {
-                font-size:1.2rem;
+                font-size:1.4rem;
                 color: #ccc;
             }    
              
@@ -273,8 +274,9 @@
                 color: gray;
             }
             
-        }
+        }  
 
+        // Ajustes nos Pedidos
         .salle-rating {
             display: flex;
             flex-direction: row;
@@ -319,7 +321,7 @@
             color: $orange-color;
             margin-block: 0.4rem;
             text-align: left;
-            font-weight: 600;
+            font-weight: 500;
             @media screen and (max-width: 991px) {
                 font-size: 1.2rem;
             }
@@ -332,21 +334,28 @@
                 font-size: 1.0rem;
             }
         }
+
+        // Ajustes no botão
         .btn-more{
             width: 100%;
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            padding: 0.4rem 1rem;
-            background-color: $orange-color;
-            color: $white-color;
+            padding: 0.4rem 1rem;color: $white-color;
             font-size: 1.2rem;
             cursor: pointer;
+            background: transparent;
+            color: $orange-color;
             transition: 0.3s;
+            i{
+                color: $orange-color;
+                &:hover{
+                    color: $white-color;
+                }
+            }
             &:hover{
-                background-color: $white-color;
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-                color: $black-color;
+                background: $orange-color;
+                color: $white-color;
             }
             @media screen and (max-width: 991px) {
                 font-size: 1rem;
@@ -361,7 +370,7 @@
 
 .about{
     padding: 1.2rem;
-    height: 100vh;
+    height: auto;
     background-color: $white-color;
     color: $black-color;
     display: flex;
@@ -369,41 +378,22 @@
     justify-content:space-between;
     align-items: center;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden;
 
     
     @media screen and (max-width: 991px) {
         max-width: 100%;
         height: max-content;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
         overflow-x: hidden;
     }
-
-    h2{
-        font-size: 3.2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-
-        @media screen and (max-width: 991px) {
-            font-size: 1.8rem;
-        }
-    }
-    p{
-        font-size: 1.2rem;
-        margin-bottom: 1.0rem;
-
-        
-        @media screen and (max-width: 991px) {
-            font-size: 1.0rem;
-        }
-    }
 }
 .about-header{
-    width: 100%;
-    height: auto;
+    width: 100vw;
     display: flex;
+    height: 200px;
     flex-direction: row;
     align-items: center;
 
@@ -418,7 +408,6 @@
     }
 }
 .about-scroll{
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -435,22 +424,12 @@
         justify-content: space-evenly;
         gap: 1rem;
     }
-
-    @media screen and (max-width: 991px) {
-        max-width: 100vh;
-        width: 100%;
-        height: max-content;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 1rem;
-    }
     
     span{
         padding: 0.4rem 1.2rem;
-        border: 1px solid $black-color;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         margin-right: 1rem;
+        color: $orange-color;
         cursor: pointer;
 
         @media screen and (max-width: 991px) {
@@ -458,85 +437,138 @@
         }
     }
 }
+
 .about-content{
     width: 100%;
     height: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     height: 100%;
-    gap: 2.0rem;
-    margin-block: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-block: 1.6rem;
 
     @media screen and (max-width: 991px) {
         max-width: 100vh;
-        width: 200%;
-        height: max-content;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .midia{
         width: 100%;
-        background-color: $white-color;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .midia img{
-        width: 100%;
-        height: 110%;
-        object-fit: cover;
-        border-radius: 12px;
-
-        @media screen and (max-width: 991px) {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    .content {
-        width: 50%;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        text-align: left;
-        justify-content: start;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
    
 }
 
-.content a{
-    width: 50%;
+.about-item{
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: $orange-color;
-    color: $white-color;
-    border: none;
     cursor: pointer;
-    transition: 0.3s;
-    margin-block:1.8rem;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s;
-    &:hover{
-        background-color: $black-color;
-        border: 1px solid $white-color;
-        box-shadow: 0px 0px 20px $white-color;
-    }
-}
-.about-content >div{
-    flex: 1;
 }
 
-.about-content >div img{
+.about-midia{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.6rem;
+    object-fit: cover;
+    overflow: hidden;
+    
+    /* Faz o primeiro item ocupar 2 colunas */
+    img.large {
+        grid-column: span 1; /* Ocupar duas colunas */
+        grid-row: span 2;    /* Ocupar uma linha */
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        transition: all 0.3s;
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        img{
+            border-radius: 6px;
+        }
+    }
+    
+}
+
+.about-info{
     width: 100%;
     height: auto;
+    display: flex;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    div{
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    h2{
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-align: left;
+        color: $orange-color;
+        @media screen and (max-width: 991px) {
+            font-size: 1.8rem;
+        }
+    }
+    h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-block-end: 0.6rem;
+        color: $orange-color;
+    }
+    p{
+        font-size: 1.0rem;
+        text-align: left;
+    }
+    .about-rating{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        gap: 0.5rem;
+        div{
+            height: auto;
+            i{
+                font-size: 1.2rem;
+                color: $black-color;
+                transition: 0.3s;
+                &:hover{
+                    color: $white-color;
+                }
+            }
+        }
+        .about-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: $black-color;
+            font-size: 1.2rem;
+            cursor: pointer;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            transition: 0.3s;
+            &:hover{
+                background-color: $orange-color;
+                color: $white-color;
+            }
+        }
+    }
 }
 
 // Highlihts //

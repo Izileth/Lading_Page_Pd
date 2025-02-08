@@ -230,7 +230,7 @@ i:hover {
 .hero .hero-content {
   max-width: 1900px;
   height: 380px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
 }
 .hero h1 {
@@ -255,17 +255,19 @@ i:hover {
   color: #f2f2f2;
   margin-bottom: 2.5rem;
 }
-.hero a {
+.hero span {
+  color: #fd9c00;
+}
+.hero .hero-btn {
   background-color: #fd9c00;
   color: #f2f2f2;
   padding: 0.6rem 1.2rem;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.3s, box-shadow 0.3s ease;
   font-size: 1.2rem;
-  margin-block: 1.2rem;
 }
-.hero a:hover {
+.hero .hero-btn:hover {
   background-color: #f2f2f2;
   box-shadow: 0px 0px 20px #f2f2f2;
   color: #000000;
@@ -338,6 +340,14 @@ i:hover {
   align-items: center;
   text-align: center;
   overflow: hidden;
+}
+.gallery .gallery-header {
+  font-size: 2.8rem;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  color: #000000;
+  margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 991px) {
   .gallery {
@@ -441,14 +451,22 @@ i:hover {
   gap: 1rem;
   padding: 1rem;
 }
+.gallery .grid-content .price-rating {
+  margin-block: 0.4rem;
+}
+.gallery .grid-content .price-rating .price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+}
 .gallery .grid-content .star-rating {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-block-end: 0.6rem;
 }
 .gallery .grid-content .star-rating .star {
-  font-size: 1.4rem;
-  color: #ccc;
+  font-size: 1.6rem;
 }
 .gallery .grid-content .star-rating .star.active {
   color: gold;
@@ -456,7 +474,11 @@ i:hover {
 .gallery .grid-content .star-rating .rating-count {
   font-size: 1rem;
   margin-left: 10px;
-  color: gray;
+}
+.gallery .grid-content .average-rating {
+  font-size: 1rem;
+  margin-block: 0.4rem;
+  color: #fd9c00;
 }
 .gallery .grid-content .salle-rating {
   display: flex;
@@ -475,7 +497,6 @@ i:hover {
   width: max-content;
 }
 .gallery .grid-content .salle-rating div a {
-  background-color: #fd9c00;
   color: #f2f2f2;
   padding: 0.2rem 1.2rem;
   text-decoration: none;
@@ -483,7 +504,6 @@ i:hover {
   font-size: 1rem;
 }
 .gallery .grid-content .salle-rating div a:hover {
-  background-color: #f2f2f2;
   box-shadow: 0px 0px 20px #f2f2f2;
   color: #000000;
 }
@@ -491,7 +511,7 @@ i:hover {
   font-size: 2.2rem;
   color: #fd9c00;
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
 }
 @media screen and (max-width: 991px) {
   .gallery .grid-content h3 {
@@ -504,6 +524,9 @@ i:hover {
   margin-block: 0.4rem;
   text-align: left;
   font-weight: 500;
+}
+.gallery .grid-content h4 i {
+  color: #fd9c00;
 }
 @media screen and (max-width: 991px) {
   .gallery .grid-content h4 {
@@ -536,11 +559,12 @@ i:hover {
   color: #fd9c00;
 }
 .gallery .grid-content .btn-more i:hover {
-  color: #f2f2f2;
+  color: #000000;
+  text-shadow: #f8f8f8;
 }
 .gallery .grid-content .btn-more:hover {
-  background: #fd9c00;
-  color: #f2f2f2;
+  color: #000000;
+  text-shadow: #f8f8f8;
 }
 @media screen and (max-width: 991px) {
   .gallery .grid-content .btn-more {
@@ -580,6 +604,7 @@ i:hover {
   height: 200px;
   flex-direction: row;
   align-items: center;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
 }
 @media screen and (max-width: 991px) {
   .about-header {
@@ -601,6 +626,15 @@ i:hover {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  animation: carousel-words 10s linear infinite;
+}
+@keyframes carousel-words {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 @media screen and (max-width: 991px) {
   .about-scroll {
@@ -616,7 +650,7 @@ i:hover {
 }
 .about-scroll span {
   padding: 0.4rem 1.2rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-right: 1rem;
   color: #fd9c00;
   cursor: pointer;
@@ -700,19 +734,30 @@ i:hover {
   gap: 0.8rem;
   padding: 1.2rem;
 }
+.about-info .price-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block-end: 0.4rem;
+}
+.about-info .price-rating .price {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 700;
+}
 .about-info div {
   font-weight: 400;
   font-size: 1.1rem;
   text-align: left;
 }
-.about-info h2 {
+.about-info h3 {
   font-size: 2.8rem;
   font-weight: 700;
   text-align: left;
   color: #fd9c00;
 }
 @media screen and (max-width: 991px) {
-  .about-info h2 {
+  .about-info h3 {
     font-size: 1.8rem;
   }
 }
@@ -722,11 +767,19 @@ i:hover {
   margin-block-end: 0.6rem;
   color: #fd9c00;
 }
+.about-info h4 i {
+  color: #fd9c00;
+}
 .about-info p {
   font-size: 1rem;
   text-align: left;
 }
-.about-info .about-rating {
+.about-info .average-rating {
+  font-size: 1rem;
+  margin-block: 0.4rem;
+  color: #fd9c00;
+}
+.about-info .salle-rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -734,18 +787,18 @@ i:hover {
   height: auto;
   gap: 0.5rem;
 }
-.about-info .about-rating div {
+.about-info .salle-rating div {
   height: auto;
 }
-.about-info .about-rating div i {
+.about-info .salle-rating div i {
   font-size: 1.2rem;
   color: #000000;
   transition: 0.3s;
 }
-.about-info .about-rating div i:hover {
-  color: #f2f2f2;
+.about-info .salle-rating div i:hover {
+  color: #fd9c00;
 }
-.about-info .about-rating .about-btn {
+.about-info .salle-rating .btn-more {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -757,9 +810,8 @@ i:hover {
   padding: 0.4rem 1rem;
   transition: 0.3s;
 }
-.about-info .about-rating .about-btn:hover {
-  background-color: #fd9c00;
-  color: #f2f2f2;
+.about-info .salle-rating .btn-more:hover {
+  color: #fd9c00;
 }
 
 .highlights {
@@ -1591,6 +1643,252 @@ footer p {
   opacity: 1;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f2f2f2;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.modal-content h2 {
+  font-size: 2rem;
+  color: #fd9c00;
+  text-align: center;
+  font-weight: 400;
+}
+.modal-content p {
+  font-size: 1rem;
+  color: #fd9c00;
+  text-align: left;
+}
+.modal-content .star-rating {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+  margin-block: 0.4rem;
+  gap: 1.8rem;
+}
+.modal-content .star-rating .star {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.modal-content .star-rating .star:hover {
+  color: gold;
+}
+.modal-content .star-rating .star:active {
+  color: gold;
+}
+.modal-content form {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1rem;
+}
+.modal-content form .input-group {
+  margin-bottom: 10px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal-content form input {
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  padding: 5px;
+  padding: 1rem;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+.modal-content form input:focus {
+  border: 1px solid #ff0000;
+}
+.modal-content form input:active {
+  border: 1px solid #ff0000;
+}
+.modal-content form textarea {
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 120px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+.modal-content form textarea:focus {
+  border: 1px solid #ff0000;
+}
+.modal-content form label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.modal-content form button {
+  background-color: #fd9c00;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  border: none;
+  font-weight: 40;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+.modal-content form button:hover {
+  background-color: #000000;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.star-rating .star {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;
+}
+
+.star-rating .star.selected {
+  color: #ffcc00;
+}
+
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentario {
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+  position: relative;
+}
+
+.comentario p {
+  margin: 5px 0;
+}
+
+.comentario .autor {
+  font-weight: bold;
+}
+
+.comentario .acoes {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.comentario .acoes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.comentario .acoes button:hover {
+  color: #007bff;
+}
+
+.carousel {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-block: 1.6rem;
+}
+.carousel .carousel-scroll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin-block: 1.2rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
+}
+.carousel .carousel-scroll .carousel-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  animation: carousel-words 30s linear infinite;
+}
+.carousel .carousel-scroll .carousel-inner .carousel-item {
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.carousel .carousel-scroll .carousel-inner .carousel-item:hover {
+  transform: scale(1.02);
+}
+.carousel .carousel-scroll .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 991px) {
+  .carousel .carousel-scroll .carousel-inner .carousel-item img {
+    width: 200px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 12px;
+  }
+}
+
+@keyframes carousel-words {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 body {
   font-family: "Noto Sans", "Helvetica Neue";
   width: "100%";

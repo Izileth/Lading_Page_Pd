@@ -3,6 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Meta Tags e SEO da Página-->
+
+    <meta name="author" content="Izileth">
+    <meta name="description" content="Descrição da Página">
+    <meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.position" content="-22.9519,-47.0567">
+    <meta name="ICBM" content="-22.9519,-47.0567">
+    <meta name="language" content="pt-br">
+    <meta name="content-language" content="pt-br">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="global">
+    <meta name="copyright" content="Izileth &copy; 2025">
+    <meta name="publisher" content="Izileth">
+    <meta name="og:title" content="Gran Padoca - Confeitaria">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://gran-padoca.com.br/">
+    <meta name="og:image" content="https://gran-padoca.com.br/assets/logo_gran_padoca.png">
+    <meta name="og:description" content="Confeitaria especializada em doces, biscoitos, salgados, e outros produtos alimentares.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gran Padoca - Confeitaria">
+    <meta name="twitter:description" content="Confeitaria especializada em doces, biscoitos, salgados, e outros produtos alimentares.">
+    <meta name="twitter:image" content="https://gran-padoca.com.br/assets/logo_gran_padoca.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_logoa_P/apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="/assets/favicon_logoa_P/favicon-32x32.png">
+    <link rel="mask-icon" href="/assets/favicon_logoa_P/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +45,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Major+Mono+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Gran Padoca</title>
+    <title>Gran Padoca - Confeitaria</title>
 </head>
 <body>
     <!--Cabeçalho da Página-->
@@ -40,29 +75,69 @@
             </nav>
             <main  data-aos="zoom-in"class="hero container">
                 <div  data-aos="fade-down" class="hero-content container">
-                    <h1>Gran Padoca </h1>
+                    <h1><span>Gran</span> Padoca </h1>
                     <h2>A Melhor Casa de Pães de Belém do Pará</h2>
                     <p>Através Dessa Página Virtual, Pretendemos Coquistar Ainda Mais Clientes Com Nossas Confeitarias Refinadas e Nossa Qualidade Que Se Extende Aos Minimos Detalhes. </p>
-                    <a href="/" class="hero-btn">Conheça mais</a>
+                    <button class="hero-btn">Conheça mais</button>
                 </div>   
             </main>
         </header>
     </div>
 
+    <!--Carousel de Aprsentação-->
+    <section class="carousel">
+        <div class="carousel-scroll">
+            <div class="carousel-inner">
+                <!--Prato 1-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/torta1.jpg" alt="Padoca">
+                </div>
+                <!--Prato 2-->
+                <div  data-aos="fade-up" class="carousel-item">
+                    <img src="assets/img/torta2.jpg" alt="Padoca">
+                </div>
+                <!--Prato 3-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/torta3.jpg" alt="Padoca">
+                </div>
+                <!--Prato 4-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg4.jpg" alt="Padoca">
+                </div>
+                <!--Prato 5-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg5.jpg" alt="Padoca">
+                </div>
+                <!--Prato 6-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg7.jpg" alt="Padoca">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--Seção Galleryt-->
     <section id="gallery" class="gallery">
         <div  data-aos="fade-down" class="gallery-content">
             <div  data-aos="fade-left" class="gallery-grid">
-                <div  data-aos="fade-up"class="grid-item">
+
+                <!--Prato 1-->
+                <div  data-aos="fade-up"class="grid-item" data-prato-id="1">
                     <div  data-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta1.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
                             <h3>Torta de Chocolate com Morango</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 23,00</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -72,37 +147,46 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador A</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
                         </div>
                     </div>    
                 </div>
-
-                <div  data-aos="fade-up"class="grid-item">
+                
+                <!--Prato 2-->
+                <div  data-aos="fade-up"class="grid-item" data-prato-id="2">
                     <div  data-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta3.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
-                            <h3>Torta de Morango Com Blue Berry</h3>
+                            <h3>Torta de Morango Com Blue Barry</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 21,20</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -112,37 +196,46 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador B</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
-                        </div>
+                        </div> 
                     </div>    
                 </div>
 
-                <div  data-aos="fade-up"class="grid-item">
+                <!--Prato 3-->
+                <div  data-aos="fade-up"class="grid-item" data-prato-id="3">
                     <div  data-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta2.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
                             <h3>Torta de Morango Com Pudim de Leite</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 16,90</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -152,37 +245,46 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador C</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
-                        </div>
+                        </div> 
                     </div>    
                 </div>
 
-                <div  data-aos="fade-up"class="grid-item">
+                <!--Prato 4-->
+                <div  data-aos="fade-up"class="grid-item" data-prato-id="4">
                     <div  data-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta4.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
-                            <h3>Torta de Doces e Confeitarias</h3>
+                            <h3>Torta de Leite Moça com Doces</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 25,00</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -192,40 +294,46 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador D</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
-                            <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
-                            </div>
-                        </div>
+                        </div> 
                     </div>    
                 </div>
-
-                <div  data-aos="fade-up"class="grid-item">
+                
+                <!--Prato 5-->
+                <div  data-aos="fade-up" data-prato-id="5" class="grid-item" >
                     <div  data-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta7.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
-                            <h3>Torta de Mousse de Cacau</h3>
+                            <h3>Torta de Chocolate Amargo com Leie</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 11,20</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -235,37 +343,46 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador E</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
-                        </div>
+                        </div> 
                     </div>    
                 </div>
-
-                <div data-aos="fade-up"class="grid-item">
+                
+                <!--Prato 6-->
+                <div data-aos="fade-up"class="grid-item" data-prato-id="6">
                     <div  ata-aos="fade-right"  class="grid-midia">
                         <img src="assets/img/torta8.jpg" alt="Padoca">
                     </div>
                     <div  data-aos="fade-down" class="grid-content">
                         <div>
-                            <h3>Brownie de Chocolate e Doce de Leite</h3>
+                            <h3>Brownie de Chocolate com Creme de Leite</h3>
+
+                            <!--Sistema de Preço-->
+                            <div class="price-rating">
+                                <p class="price">R$ 9,10</p>
+                            </div>
                             <!-- Sistema de Avaliação -->
                             <div>
-                                <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
+                                <h4>Avaliações <i class="fa fa-star"></i></h4>
+                                <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
                                 <div class="star-rating">
                                     <span data-value="1" class="star">★</span>
                                     <span data-value="2" class="star">★</span>
@@ -275,310 +392,383 @@
                                     <span class="rating-count">(0 avaliações)</span>
                                 </div>
                             </div> 
-                            <p>A padaria tem aquele clima que faz você querer ficar por horas. Mesas de madeira rústicas e o aroma maravilhoso de pão fresco se espalhando pelo ambiente criam uma sensação de conforto instantâneo. É o tipo de lugar perfeito para desacelerar e aproveitar um bom café sem pressa.</p>
-
-                            <!--Experiencia do Usuário-->
-                            <div>
+                            <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+                
+                            <!-- Experiência do Usuário -->
+                            <div class="comentarios">
                                 <h4>O que os Nossos Clientes Dizem?</h4>
-                                <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor ponta de comida na cidade.</p>
-                                <p>-- Morador F</p>
+                                <div class="comentarios-list">
+                                    <!-- Comentários serão carregados aqui -->
+                                </div>
                             </div>
                         </div>
-                        <!--Sisten de Compra e Venda-->
+                
+                        <!-- Sistema de Compra e Venda -->
                         <div class="salle-rating">
                             <div>
                                 <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                             </div>
                             <div>
-                                <button class="btn-more avaliar-btn">Adiconar Pedido <i class="fa fa-plus"></i></button>
+                                <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                             </div>
-                        </div>
+                        </div> 
                     </div>    
                 </div>
 
             </div>    
         </div>
-    </section>           
+    </section>       
+    
+     <!--Carousel de Aprsentação-->
+     <section class="carousel">
+        <div class="carousel-scroll">
+            <div class="carousel-inner">
+                <!--Prato 1-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/torta1.jpg" alt="Padoca">
+                </div>
+                <!--Prato 2-->
+                <div  data-aos="fade-up" class="carousel-item">
+                    <img src="assets/img/torta2.jpg" alt="Padoca">
+                </div>
+                <!--Prato 3-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/torta3.jpg" alt="Padoca">
+                </div>
+                <!--Prato 4-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg4.jpg" alt="Padoca">
+                </div>
+                <!--Prato 5-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg5.jpg" alt="Padoca">
+                </div>
+                <!--Prato 6-->
+                <div  data-aos="fade-up" class="carousel-item" >
+                    <img src="assets/img/salg7.jpg" alt="Padoca">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Seção About-->
 
     <section id="about" class="about">
-        <div class="about-header container">
-            <div  data-aos="zoom-in" class="about-scroll">
-                <span>
-                    Cardápio de Salgados
-                </span>
-                <span>
-                    Gran Padoca
-                </span>
-                <span>
-                    Cardápio de Salgados
-                </span>
-                <span>
-                    Gran Padoca
-                </span>
-                <span>
-                    Cardápio de Salgados
-                </span>
-            </div>
-        </div>   
-
+        <div class="about-header container"></div>   
         <div data-aos="fade-up" class="about-content ">
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            <!--Prato 1 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="7">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg1.jpg" class="large">
                         <img src="/assets/img/salg1.jpg">
                         <img src="/assets/img/salg1.jpg">
                     </div>
-                    <h2>Pastéis de Queijo e Presunto</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Pastéis de Queijo e Presunto</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            
+            <!--Prato 2 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="8">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg3.jpg" class="large">
                         <img src="/assets/img/salg3.jpg">
                         <img src="/assets/img/salg3.jpg">
                     </div>
-                    <h2>Pastéis de Carangueijo</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Pestéis de Camarão</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
 
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            <!--Prato 3 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="9">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg4.jpg" class="large">
                         <img src="/assets/img/salg4.jpg">
                         <img src="/assets/img/salg4.jpg">
                     </div>
-                    <h2>Croissant de Frango</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Croissant de Frango com catupiry</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            
+            <!--Prato 4 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="10">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg5.jpg" class="large">
                         <img src="/assets/img/salg5.jpg">
                         <img src="/assets/img/salg5.jpg">
                     </div>
-                    <h2>Croissant de Chocolate</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Croissant de Chocolate e Doce de Leite</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            
+            <!--Prato 5 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="11">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg6.jpg" class="large">
                         <img src="/assets/img/salg6.jpg">
                         <img src="/assets/img/salg6.jpg">
                     </div>
-                    <h2>Croissant de Doce de Leite</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Croissant de Carangueijo</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-
-            <div data-aos="fade-down" data-aos-delay="200" class="about-item">
+            
+            <!--Prato 6 -->
+            <div data-aos="fade-down" data-aos-delay="200" class="about-item"  data-prato-id="12">
                 <div class="about-info">
                     <div class="about-midia">
                         <img src="/assets/img/salg7.jpg" class="large">
                         <img src="/assets/img/salg7.jpg">
                         <img src="/assets/img/salg7.jpg">
                     </div>
-                    <h2>Rolinhos de Bacalháu</h2>
-                    <div>
-                        <h4>Avaliações <i style="color: #ff9d00;" class="fa fa-star"></i></h4>
-                        <div class="star-rating">
-                            <span data-value="1" class="star">�</span>
-                            <span data-value="2" class="star">�</span>
-                            <span data-value="3" class="star">�</span>
-                            <span data-value="4" class="star">�</span>
-                            <span data-value="5" class="star">�</span>
-                            <span class="rating-count">(0 avaliações)</span>
+                    <div class="about-info">
+                        <h3>Rolinhos de Doce de Leite</h3>
+
+                        <!--Sistema de Preço-->
+                        <div class="price-rating">
+                            <p class="price">R$ 9,10</p>
+                        </div>
+                        <!-- Sistema de Avaliação -->
+                        <div>
+                            <h4>Avaliações <i class="fa fa-star"></i></h4>
+                            <p class="average-rating">Média: <span class="average-rating-value">0</span>/5</p>
+                            <div class="star-rating">
+                                <span data-value="1" class="star">★</span>
+                                <span data-value="2" class="star">★</span>
+                                <span data-value="3" class="star">★</span>
+                                <span data-value="4" class="star">★</span>
+                                <span data-value="5" class="star">★</span>
+                                <span class="rating-count">(0 avaliações)</span>
+                            </div>
+                        </div> 
+                        <p>Uma deliciosa torta de chocolate com morangos frescos.</p>
+            
+                        <!-- Experiência do Usuário -->
+                        <div class="comentarios">
+                            <h4>O que os Nossos Clientes Dizem?</h4>
+                            <div class="comentarios-list">
+                                <!-- Comentários serão carregados aqui -->
+                            </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel orci non sem lobortis sollicitudin. Donec ut arcu vel arcu consectetur volutpat. Sed in faucibus velit. In in lectus vel sapien fermentum sagittis. Nullam facilisis, felis ac cursus congue, nunc mauris dictum enim, at convallis felis lectus a ipsum.</p>
-                    <div>
+            
+                    <!-- Sistema de Compra e Venda -->
+                    <div class="salle-rating">
                         <div>
-                            <h4>O que Nossos Clientes Dizem?</h4>
-                            <p>Como sempre, a padaria é a melhor escolha para quem quer ter um pão delicioso e com um atendimento excelente. Ao entrar, você é bem-vindo e o atendimento é muito amigável. A comida é sempre bom, e o garçom é um ótimo amigo. O local também é bem localizado, com a melhor pont</p>
-                            <p>-- Morador A</p>
-                        </div>
-                    </div>
-                    <div class="about-rating">
-                        <div>
-                            <button type="button" class="about-btn">Avaliar <i class="fa fa-thumbs-up"></i></button>
+                            <button class="btn-more avaliar-btn">Avaliar  <i class="fa fa-thumbs-up"></i></button>
                         </div>
                         <div>
-                            <button type="button" class="about-btn">Solicitar Pedido <i class="fa fa-plus"></i> </button>
+                            <button class="btn-more pedido-btn">Adicionar Pedido <i class="fa fa-plus"></i></button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-
-
+            
         </div>
 
     </section>
 
     <!--Seção de Hightiths-->
     <section id="highlights" class="highlights">
-        <div class="highlights-header">
-            <div  data-aos="zoom-in" class="highlights-scroll">
-                <span>
-                    Item 1
-                </span>
-                <span>
-                    Item 2
-                </span>
-                <span>
-                    Item 3
-                </span>
-                <span>
-                    Item 4
-                </span>
-                <span>
-                    item 5
-                </span>
-            </div>    
-        </div>
-
+        <div class="highlights-header"></div>
         <div class="highlights-content container">
             <div  data-aos="fade-up" class="highlights-item">
                 <div class="midia">
@@ -731,6 +921,32 @@
             <p>&copy; Copyrithing by Izileth Services</p>
         </div>
     </footer>
+    
+    <div id="avaliarModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Avaliar Prato</h2>
+            <form id="avaliarForm">
+                <div class="input-group">
+                    <label for="nome"></label>
+                    <input class="input" placeholder="Digite seu Nome" type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="comentario"></label>
+                    <textarea class="input" placeholder="Digite seu Comentário" id="comentario" name="comentario" rows="4" required></textarea>
+                </div>
+                <p>De 1 a 5 estrelas, qual a sua satisfação com o prato?</P>
+                    <div class="star-rating">
+                        <span data-value="1" class="star">★</span>
+                        <span data-value="2" class="star">★</span>
+                        <span data-value="3" class="star">★</span>
+                        <span data-value="4" class="star">★</span>
+                        <span data-value="5" class="star">★</span>
+                    </div>
+                <button type="submit" id="submitRating">Enviar Avaliação</button>
+            </form>
+        </div>
+    </div>
 
     <!--Botão de Whatsapp-->
     <a data-aos-delay="600" data-aos="fade-up" href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá%20Padoca%20Padaria%20&amp;source=&amp;data=&amp;app_absent=" class="whatsapp-btn" target="_blank">
@@ -738,7 +954,9 @@
         <span  data-aos-delay="500"data-aos="fade-down">Entrar em contato</span>
     </a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="index.js"></script>
+    <script src="/frontend/js/index.js"></script>
+    <script src="/frontend/js/modal.js"></script>
+    <script src="/frontend/js/modalAvalieted.js"></script>
     <script>  AOS.init();</script>
 </body>
 </html>

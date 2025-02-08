@@ -41,7 +41,7 @@
     .hero-content{
         max-width: 1900px;
         height: 380px;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.4);
         border-radius: 12px;
     }
 
@@ -66,16 +66,18 @@
         color: $white-color;
         margin-bottom: 2.5rem;
     }
+    span{
+        color: $orange-color;
+    }
     
-    a{
+    .hero-btn{
         background-color: $orange-color;
         color: $white-color;
         padding: 0.6rem 1.2rem;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 400;
         transition: 0.3s, box-shadow 0.3s ease;
         font-size: 1.2rem;
-        margin-block: 1.2rem;
         
 
         &:hover{
@@ -160,6 +162,14 @@
     align-items: center;
     text-align: center;
     overflow: hidden;
+
+    .gallery-header{
+        font-size: 2.8rem;
+        width: 100%;
+        height: max-content;
+        color: $black-color;
+        margin-bottom: 1.5rem;
+    }
 
     @media screen and (max-width: 991px) {
         height: max-content;
@@ -253,15 +263,27 @@
         gap: 1rem;
         padding: 1rem;
 
+        // Ajustes no Preço
+
+        .price-rating{
+            margin-block: 0.4rem;
+            .price{
+                font-size: 2rem;
+                font-weight: 600;
+                color: $black-color;
+            }
+        }
+
 
         // Ajustes nas Estrelas
+
         .star-rating {
             display: flex;
             align-items: center;
             cursor: pointer;
+            margin-block-end: 0.6rem;
             .star {
-                font-size:1.4rem;
-                color: #ccc;
+                font-size:1.6rem;
             }    
              
             .star.active {
@@ -271,12 +293,18 @@
             .rating-count {
                 font-size: 1rem;
                 margin-left: 10px;
-                color: gray;
             }
             
         }  
 
+        .average-rating{
+            font-size: 1rem;
+            margin-block: 0.4rem;
+            color: $orange-color;
+        }
+
         // Ajustes nos Pedidos
+
         .salle-rating {
             display: flex;
             flex-direction: row;
@@ -290,7 +318,6 @@
                 height: max-content;
                 width: max-content;
                 a{
-                    background-color: $orange-color;
                     color: $white-color;
                     padding: 0.2rem 1.2rem;
                     text-decoration: none;
@@ -298,7 +325,6 @@
                     font-size: 1rem;
                     
                     &:hover{
-                        background-color:$white-color;
                         box-shadow: 0px 0px 20px $white-color;
                         color: $black-color;
                     }
@@ -310,7 +336,7 @@
             font-size: 2.2rem;
             color: $orange-color;
             text-align: left;
-            font-weight: 600;
+            font-weight: 700;
 
             @media screen and (max-width: 991px) {
                 font-size: 1.8rem;
@@ -322,6 +348,9 @@
             margin-block: 0.4rem;
             text-align: left;
             font-weight: 500;
+            i{
+                color: $orange-color;
+            }
             @media screen and (max-width: 991px) {
                 font-size: 1.2rem;
             }
@@ -336,6 +365,7 @@
         }
 
         // Ajustes no botão
+
         .btn-more{
             width: 100%;
             display: flex;
@@ -350,12 +380,13 @@
             i{
                 color: $orange-color;
                 &:hover{
-                    color: $white-color;
+                    color: $black-color;
+                    text-shadow: #f8f8f8;
                 }
             }
             &:hover{
-                background: $orange-color;
-                color: $white-color;
+                color: $black-color;
+                text-shadow: #f8f8f8;
             }
             @media screen and (max-width: 991px) {
                 font-size: 1rem;
@@ -396,6 +427,7 @@
     height: 200px;
     flex-direction: row;
     align-items: center;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
 
     @media screen and (max-width: 991px) {
         max-width: 100vh;
@@ -414,6 +446,16 @@
     justify-content:space-between;
     width: 100%;
     height: 100%;
+    animation: carousel-words 10s linear infinite;
+    
+    @keyframes carousel-words {
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    }
 
     @media screen and (max-width: 991px) {
         max-width: 100vh;
@@ -427,7 +469,7 @@
     
     span{
         padding: 0.4rem 1.2rem;
-        font-size: 1.8rem;
+        font-size: 2.0rem;
         margin-right: 1rem;
         color: $orange-color;
         cursor: pointer;
@@ -510,12 +552,23 @@
     align-items: start;
     gap: 0.8rem;
     padding: 1.2rem;
+    .price-rating{
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-block-end: 0.4rem;
+        .price{
+            font-size: 2rem;
+            color: $black-color;
+            font-weight: 700;
+        }
+    }
     div{
         font-weight: 400;
         font-size: 1.1rem;
         text-align: left;
     }
-    h2{
+    h3{
         font-size: 2.8rem;
         font-weight: 700;
         text-align: left;
@@ -529,12 +582,21 @@
         font-weight: 500;
         margin-block-end: 0.6rem;
         color: $orange-color;
+        i{
+            color: $orange-color;
+        }
     }
     p{
         font-size: 1.0rem;
         text-align: left;
     }
-    .about-rating{
+    .average-rating{
+        font-size: 1rem;
+        margin-block: 0.4rem;
+        color: $orange-color;
+    }
+
+    .salle-rating{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -548,11 +610,11 @@
                 color: $black-color;
                 transition: 0.3s;
                 &:hover{
-                    color: $white-color;
+                    color: $orange-color;
                 }
             }
         }
-        .about-btn{
+        .btn-more{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -564,8 +626,7 @@
             padding: 0.4rem 1rem;
             transition: 0.3s;
             &:hover{
-                background-color: $orange-color;
-                color: $white-color;
+                color: $orange-color;
             }
         }
     }

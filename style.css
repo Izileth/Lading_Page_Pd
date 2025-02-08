@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Major+Mono+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -216,6 +217,83 @@ i:hover {
   background-position: 50% 0;
   opacity: 0.8;
   filter: blur(5px);
+}
+
+.header {
+  background-color: #f6f6f6;
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+@media screen and (max-width: 991px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem;
+  }
+}
+.header .header-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 991px) {
+  .header .header-content {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+  .header .header-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+    color: #f2f2f2;
+  }
+}
+.header .header-content .header-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.header .header-content .header-item a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.header .header-content .header-item h2 {
+  font-size: 3.8rem;
+  color: #fd9c00;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+@media screen and (max-width: 991px) {
+  .header .header-content .header-item h2 {
+    font-size: 2.2rem;
+  }
+}
+.header .header-content .header-item p {
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+}
+@media screen and (max-width: 991px) {
+  .header .header-content .header-item p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header .header-content .header-item a {
+    font-size: 1.4rem;
+  }
 }
 
 .hero {
@@ -702,6 +780,12 @@ i:hover {
   align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 991px) {
+  .about-item {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .about-midia {
   width: 100%;
@@ -714,6 +798,12 @@ i:hover {
      object-fit: cover;
   overflow: hidden;
   /* Faz o primeiro item ocupar 2 colunas */
+}
+@media screen and (max-width: 991px) {
+  .about-midia {
+    width: 100%;
+    height: auto;
+  }
 }
 .about-midia img.large {
   grid-column: span 1; /* Ocupar duas colunas */
@@ -745,6 +835,12 @@ i:hover {
   align-items: start;
   gap: 0.8rem;
   padding: 1.2rem;
+}
+@media screen and (max-width: 991px) {
+  .about-info {
+    width: 100%;
+    height: auto;
+  }
 }
 .about-info .price-rating {
   display: flex;
@@ -889,6 +985,8 @@ i:hover {
 @media screen and (max-width: 991px) {
   .highlights-content .highlights-item {
     flex-direction: column;
+    width: 100%;
+    height: auto;
     gap: 0.8rem;
     padding: 1.2rem;
   }
@@ -920,6 +1018,12 @@ i:hover {
   gap: 1.2rem;
   padding: 1.2rem;
 }
+@media screen and (max-width: 991px) {
+  .highlights-content .highlights-item .highlights-midia {
+    height: auto;
+    width: 100%;
+  }
+}
 .highlights-content .highlights-item .highlights-midia img {
   width: 300px;
   height: 520px;
@@ -927,6 +1031,12 @@ i:hover {
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease;
+}
+@media screen and (max-width: 991px) {
+  .highlights-content .highlights-item .highlights-midia img {
+    height: 280px;
+    width: 100%;
+  }
 }
 .highlights-content .highlights-item .highlights-midia img:hover {
   transform: rotate(5deg);
@@ -941,11 +1051,22 @@ i:hover {
   gap: 0.8rem;
   padding: 1.2rem;
 }
+@media screen and (max-width: 991px) {
+  .highlights-content .highlights-info {
+    height: auto;
+    width: 100%;
+  }
+}
 .highlights-content .highlights-info h3 {
   font-size: 2.4rem;
   font-weight: 700;
   text-align: left;
   color: #000000;
+}
+@media screen and (max-width: 991px) {
+  .highlights-content .highlights-info h3 {
+    font-size: 2rem;
+  }
 }
 .highlights-content .highlights-info h4 {
   font-size: 1.2rem;
@@ -1064,6 +1185,7 @@ i:hover {
     height: -moz-max-content;
     height: max-content;
     width: 100%;
+    height: auto;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
@@ -1081,6 +1203,12 @@ i:hover {
   background-color: #f2f2f2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 991px) {
+  .showcase .showcase-content .showcase-item {
+    height: auto;
+    width: 100%;
+  }
+}
 .showcase .showcase-content .showcase-item .showcase-midia {
   width: 100%;
   height: 100%;
@@ -1091,6 +1219,12 @@ i:hover {
      object-fit: cover;
   gap: 1.2rem;
   padding: 1.2rem;
+}
+@media screen and (max-width: 991px) {
+  .showcase .showcase-content .showcase-item .showcase-midia {
+    width: 100%;
+    height: auto;
+  }
 }
 .showcase .showcase-content .showcase-item .showcase-midia img {
   width: 100%;
@@ -1103,6 +1237,11 @@ i:hover {
 }
 .showcase .showcase-content .showcase-item .showcase-midia img:hover {
   transform: scale(1.02);
+}
+@media screen and (max-width: 600px) {
+  .showcase .showcase-content .showcase-item .showcase-midia img {
+    height: 150px;
+  }
 }
 .showcase .showcase-content .showcase-item .showcase-midia img.large {
   grid-column: span 2; /* Ocupar duas colunas */
@@ -1124,12 +1263,22 @@ i:hover {
   text-align: left;
   color: #000000;
 }
+@media screen and (max-width: 600px) {
+  .showcase .showcase-content .showcase-item .showcase-info h3 {
+    font-size: 2rem;
+  }
+}
 .showcase .showcase-content .showcase-item .showcase-info h4 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-block-end: 0.6rem;
   color: #fd9c00;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .showcase .showcase-content .showcase-item .showcase-info h4 {
+    font-size: 1.2rem;
+  }
 }
 .showcase .showcase-content .showcase-item .showcase-info h4 i {
   color: #fd9c00;
@@ -1284,14 +1433,14 @@ i:hover {
   gap: 1.5rem;
 }
 .faq .faq-content .faq-item h3 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   color: #000000;
   text-align: left;
-  font-weight: 700;
+  font-weight: 400;
 }
 @media screen and (max-width: 991px) {
   .faq .faq-content .faq-item h3 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }
 .faq .faq-content .faq-item p {
@@ -1316,10 +1465,13 @@ i:hover {
 .testimonial {
   padding: 1.2rem;
   height: 100vh;
-  background-color: #f2f2f2;
+  background-image: url(/assets/img/coffe3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   color: #000000;
@@ -1341,7 +1493,7 @@ i:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: auto;
   gap: 2rem;
   margin-block: 1.6rem;
 }
@@ -1374,7 +1526,7 @@ i:hover {
   }
 }
 .testimonial .testimonial-content .testimonial-item div h3 {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   color: #fd9c00;
   text-align: center;
   font-weight: 700;
@@ -1383,7 +1535,7 @@ i:hover {
 }
 @media screen and (max-width: 991px) {
   .testimonial .testimonial-content .testimonial-item div h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 .testimonial .testimonial-content .testimonial-item div p {
@@ -1403,10 +1555,10 @@ i:hover {
   justify-content: center;
   background-color: #fd9c00;
   color: #f2f2f2;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   cursor: pointer;
   gap: 0.4rem;
-  padding: 0.6rem 1.8rem;
+  padding: 0.6rem 2.8rem;
   transition: 0.3s;
   margin-block-start: 1.8rem;
 }
@@ -1430,7 +1582,7 @@ i:hover {
 .location {
   padding: 1.2rem;
   height: 70vh;
-  background-color: #000000;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -1480,7 +1632,7 @@ i:hover {
 }
 .location-content p {
   font-size: 1rem;
-  color: #f2f2f2;
+  color: #000000;
   text-align: left;
 }
 @media screen and (max-width: 991px) {
@@ -1532,7 +1684,7 @@ i:hover {
 footer {
   width: 100%;
   height: 15vh;
-  background-color: #000000;
+  background-color: #777777;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -1781,6 +1933,13 @@ footer p {
   justify-content: center;
   gap: 0.6rem;
   margin-block: 1.6rem;
+  background-color: #f6f6f6;
+}
+@media screen and (max-width: 991px) {
+  .carousel {
+    height: 100px;
+    width: 100%;
+  }
 }
 .carousel .carousel-scroll {
   display: flex;
@@ -1792,7 +1951,14 @@ footer p {
   width: 100%;
   height: 100%;
   margin-block: 1.2rem;
+  background-color: #f6f6f6;
   -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
+}
+@media screen and (max-width: 991px) {
+  .carousel .carousel-scroll {
+    height: 200px;
+    width: 100%;
+  }
 }
 .carousel .carousel-scroll .carousel-inner {
   display: flex;
@@ -1805,15 +1971,27 @@ footer p {
   transition: transform 0.5s ease;
   animation: carousel-words 30s linear infinite;
 }
+@media screen and (max-width: 991px) {
+  .carousel .carousel-scroll .carousel-inner {
+    height: 200px;
+    width: 100%;
+  }
+}
 .carousel .carousel-scroll .carousel-inner .carousel-item {
-  width: 500px;
-  height: 200px;
-  background-color: #fff;
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
   transition: transform 0.5s ease;
   cursor: pointer;
 }
 .carousel .carousel-scroll .carousel-inner .carousel-item:hover {
   transform: scale(1.02);
+}
+@media screen and (max-width: 991px) {
+  .carousel .carousel-scroll .carousel-inner .carousel-item {
+    height: 200px;
+    width: 100%;
+  }
 }
 .carousel .carousel-scroll .carousel-inner .carousel-item img {
   width: 100%;
@@ -1839,11 +2017,56 @@ footer p {
     transform: translateX(100%);
   }
 }
+.faq-question {
+  margin: 0;
+  padding: 15px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.faq-question span {
+  font-size: 1.6rem;
+  color: #fd9c00;
+}
+@media screen and (max-width: 991px) {
+  .faq-question span {
+    font-size: 1rem;
+  }
+}
+
+.faq-question:hover {
+  background-color: #f2f2f2;
+}
+
+.arrow-icon {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  padding: 0 15px;
+  background-color: #f2f2f2;
+}
+
+.faq-answer.open {
+  max-height: 500px; /* Ajuste conforme necessário */
+  padding: 15px;
+}
+
+.faq-question.open .arrow-icon {
+  transform: rotate(90deg);
+}
+
 body {
   font-family: "Noto Sans", "Helvetica Neue";
   width: "100%";
   font-optical-sizing: auto;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
   position: relative;
   width: 100%;
   height: 100vh;

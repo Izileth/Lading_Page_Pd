@@ -26,6 +26,76 @@
     filter: blur(5px);
 }
 
+// Header Section //
+.header{
+    background-color: #f6f6f6;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem;
+    }
+    .header-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            h3{
+                font-size: 1.6rem;
+                font-weight: 700;
+                text-align: left;
+                color: $white-color;
+            }
+        }
+        .header-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            a{
+                color: $white-color;
+                text-decoration: none;
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+            h2{
+                font-size: 3.8rem;
+                color: $orange-color;
+                margin-bottom: 0.2rem;
+                text-align: center;
+                @media screen and (max-width: 991px){
+                    font-size: 2.2rem;
+                }
+            }
+            p{
+                font-size: 1.2rem;
+                color: $black-color;
+                text-align: center;
+                @media screen and (max-width: 991px){
+                    font-size: 1.0rem;
+                }
+            }
+            @media screen and (max-width: 991px) {
+                a{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
 // ------------------------------------------ //
 
 // Hero //
@@ -515,6 +585,10 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 991px){
+        width: 100%;
+        height: auto;
+    }
 }
 
 .about-midia{
@@ -526,6 +600,10 @@
     grid-gap: 0.6rem;
     object-fit: cover;
     overflow: hidden;
+    @media screen and (max-width: 991px){
+        width: 100%;
+        height: auto;
+    }
     
     /* Faz o primeiro item ocupar 2 colunas */
     img.large {
@@ -560,6 +638,11 @@
     align-items: start;
     gap: 0.8rem;
     padding: 1.2rem;
+
+    @media screen and (max-width: 991px){
+        width: 100%;
+        height: auto;
+    }
     .price-rating{
         display: flex;
         align-items: center;
@@ -700,6 +783,8 @@
         gap: 1.5rem;
         @media screen and (max-width: 991px) {
             flex-direction: column;
+            width: 100%;
+            height: auto;
             gap: 0.8rem;
             padding: 1.2rem;
             h3{
@@ -729,12 +814,21 @@
             object-fit: cover;
             gap: 1.2rem;
             padding: 1.2rem;
+            @media screen and (max-width: 991px) {
+                height: auto;
+                width: 100%;
+            }
+            
             img{
                 width: 300px;
                 height: 520px;
                 border-radius: 6px;
                 object-fit: cover;
                 transition: transform 0.3s ease;
+                @media screen and (max-width: 991px) {
+                    height: 280px;
+                    width: 100%;
+                }
                 &:hover{
                     transform: rotate(5deg);
                 }
@@ -750,11 +844,19 @@
         align-items: start;
         gap: 0.8rem;
         padding: 1.2rem;
+        @media screen and (max-width: 991px) {
+            height: auto;
+            width: 100%;
+        }
         h3{
             font-size: 2.4rem;
             font-weight: 700;
             text-align: left;
             color: $black-color;
+            @media screen and (max-width: 991px){
+                font-size: 2rem;
+            }
+
         }
         h4{
             font-size: 1.2rem;
@@ -874,6 +976,7 @@
         @media screen and (max-width: 991px) {
             height: max-content;
             width: 100%;
+            height: auto;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(1, 1fr);
         }
@@ -889,6 +992,10 @@
             border-radius: 6px;
             background-color: $white-color;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            @media screen and (max-width: 991px) {
+                height: auto;
+                width: 100%;
+            }
             .showcase-midia{
                 width: 100%;
                 height: 100%;
@@ -897,7 +1004,11 @@
                 grid-template-rows: repeat(2, 1fr);
                 object-fit: cover;
                 gap: 1.2rem;
-                padding: 1.2rem;
+                padding: 1.2rem; 
+                @media screen and (max-width: 991px) {
+                    width: 100%;
+                    height: auto;
+                }
                 img{
                     width: 100%;
                     height: 300px;
@@ -907,6 +1018,10 @@
                     overflow: hidden;
                     &:hover{
                         transform: scale(1.02);
+                    }
+                    
+                    @media screen and (max-width: 600px) {
+                        height: 150px;
                     }
                 }
                 img.large{
@@ -928,6 +1043,9 @@
                     font-weight: 700;
                     text-align: left;
                     color: $black-color;
+                    @media screen and (max-width: 600px) {
+                        font-size: 2rem;
+                    }
                 }
                 h4{
                     font-size: 1.2rem;
@@ -935,6 +1053,9 @@
                     margin-block-end: 0.6rem;
                     color: $orange-color;
                     text-align: left;
+                    @media screen and (max-width: 600px) {
+                        font-size: 1.2rem;
+                    }
                     i{
                         color: $orange-color;
                     }
@@ -1092,13 +1213,13 @@
             gap: 1.5rem;
 
             h3{
-                font-size: 2.4rem;
+                font-size: 1.8rem;
                 color: $black-color;
                 text-align: left;
-                font-weight: 700;
+                font-weight: 400;
 
                 @media screen and (max-width: 991px) {
-                    font-size: 1.6rem;
+                    font-size: 1.2rem;
                 }
             }
             p{
@@ -1125,10 +1246,13 @@
 .testimonial{
     padding: 1.2rem;
     height: 100vh;
-    background-color: $white-color;
+    background-image: url(/assets/img/coffe3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
     text-align: center;
     color: $black-color;
@@ -1147,7 +1271,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: auto;
         gap: 2.0rem;
         margin-block: 1.6rem;
         .testimonial-item{
@@ -1176,14 +1300,14 @@
 
                 }
                 h3{
-                    font-size: 3.2rem;
+                    font-size: 4.2rem;
                     color: $orange-color;
                     text-align: center;
                     font-weight: 700;
                     margin-bottom: 1rem;
                     margin-bottom: 0;
                     @media screen and (max-width: 991px){
-                        font-size: 2.2rem;
+                        font-size: 2.0rem;
                     }
                 }
                 p{
@@ -1202,10 +1326,10 @@
                 justify-content: center;
                 background-color: $orange-color;
                 color: $white-color;
-                font-size: 1.2rem;
+                font-size: 1.6rem;
                 cursor: pointer;
                 gap: 0.4rem;
-                padding: 0.6rem 1.8rem;
+                padding: 0.6rem 2.8rem;
                 transition: 0.3s;
                 margin-block-start: 1.8rem;
                 &:hover{
@@ -1232,7 +1356,7 @@
 .location{
     padding: 1.2rem;
     height: 70vh;
-    background-color: $black-color;
+    background-color: $white-color;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -1277,7 +1401,7 @@
     }
     p{
         font-size: 1.0rem;
-        color: $white-color;
+        color: $black-color;
         text-align: left;
 
         @media screen and (max-width: 991px) {
@@ -1329,7 +1453,7 @@
 footer{
     width: 100%;
     height: 15vh;
-    background-color: $black-color;
+    background-color: $gray-color;
     display: flex;
     flex-direction: row;
     text-align: center;

@@ -1,0 +1,33 @@
+
+            <header>
+                <nav  data-aos="fade-up"  data-aos-delay="400" class="header-content container">
+                    <div  class="header-icons">
+                        <a href="/"><i class="fa fa-facebook"></i></a>
+                        <a href="/"> <i class="fa fa-instagram"></i></a>
+                        <a href="/"><i class="fa fa-reddit"></i></a>
+                    </div>
+                    <div class="header-logo">
+                        <a href="/"><span>Gran</span> Padoca</a>
+                    </div>
+                    <div  data-aos="fade-up"    data-aos-delay="500"  class="header-menu">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#gallery">Galeria</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#highlight">Destaques</a></li>
+                            <li><a href="#locate">Localização</a></li>
+                        </ul>
+                    </div>
+                    <div  data-aos="fade-up"    data-aos-delay="300"  class="header-btn">
+                        <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá%20Padoca%20Padaria%20&amp;source=&amp;data=&amp;app_absent=">Entrar em Contato</a>
+                    </div>
+                </nav>
+                <main  data-aos="zoom-in"class="hero container">
+                    <div  data-aos="fade-down" class="hero-content container">
+                        <h1><span>Gran</span> Padoca </h1>
+                        <h2>A Melhor Casa de Pães de Belém do Pará</h2>
+                        <p>Através Dessa Página Virtual, Pretendemos Coquistar Ainda Mais Clientes Com Nossas Confeitarias Refinadas e Nossa Qualidade Que Se Extende Aos Minimos Detalhes. </p>
+                        <button id="nextIn" class="hero-btn">Conheça mais</button>
+                    </div>   
+                </main>
+            </header>

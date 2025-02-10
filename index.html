@@ -35,7 +35,6 @@
     <link rel="mask-icon" href="/assets/favicon_logoa_P/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <link rel="stylesheet" href="style.css">
@@ -49,39 +48,84 @@
 </head>
 <body>
     <!--Cabeçalho da Página-->
-    <div class="bg-home">
-        <header>
-            <nav  data-aos="fade-up"  data-aos-delay="400" class="header-content container">
-                <div  class="header-icons">
-                    <a href="/"><i class="fa fa-facebook"></i></a>
-                    <a href="/"> <i class="fa fa-instagram"></i></a>
-                    <a href="/"><i class="fa fa-reddit"></i></a>
-                </div>
-                <div class="header-logo">
-                    <a href="/"><span>Gran</span> Padoca</a>
-                </div>
-                <div  data-aos="fade-up"    data-aos-delay="500"  class="header-menu">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#gallery">Galeria</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#highlight">Destaques</a></li>
-                        <li><a href="#locate">Localização</a></li>
-                    </ul>
-                </div>
-                <div  data-aos="fade-up"    data-aos-delay="300"  class="header-btn">
-                    <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá%20Padoca%20Padaria%20&amp;source=&amp;data=&amp;app_absent=">Entrar em Contato</a>
-                </div>
-            </nav>
-            <main  data-aos="zoom-in"class="hero container">
-                <div  data-aos="fade-down" class="hero-content container">
-                    <h1><span>Gran</span> Padoca </h1>
-                    <h2>A Melhor Casa de Pães de Belém do Pará</h2>
-                    <p>Através Dessa Página Virtual, Pretendemos Coquistar Ainda Mais Clientes Com Nossas Confeitarias Refinadas e Nossa Qualidade Que Se Extende Aos Minimos Detalhes. </p>
-                    <button id="nextIn" class="hero-btn">Conheça mais</button>
-                </div>   
-            </main>
-        </header>
+    <header>
+        <nav  data-aos="fade-up"  data-aos-delay="400" class="header-content container">
+            <div  class="header-icons">
+                <a href="/"><i class="fa fa-facebook"></i></a>
+                <a href="/"> <i class="fa fa-instagram"></i></a>
+                <a href="/"><i class="fa fa-reddit"></i></a>
+            </div>
+            <div class="header-logo">
+                <a href="/"><span>Gran</span> Padoca</a>
+            </div>
+            <div  data-aos="fade-up"    data-aos-delay="500"  class="header-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#highlight">Destaques</a></li>
+                    <li><a href="#locate">Localização</a></li>
+                </ul>
+            </div>
+            <div  data-aos="fade-up"    data-aos-delay="300"  class="header-btn">
+                <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá%20Padoca%20Padaria%20&amp;source=&amp;data=&amp;app_absent=">Entrar em Contato</a>
+            </div>
+        </nav>
+
+        <main  data-aos="zoom-in"class="hero container">
+            <div  data-aos="fade-down" class="hero-content container">
+                <h1><span>Gran</span> Padoca </h1>
+                <h2>A Melhor Casa de Pães de Belém do Pará</h2>
+                <p>Através Dessa Página Virtual, Pretendemos Coquistar Ainda Mais Clientes Com Nossas Confeitarias Refinadas e Nossa Qualidade Que Se Extende Aos Minimos Detalhes. </p>
+                <button id="nextIn" class="hero-btn">Conheça mais</button>
+            </div>   
+        </main>
+    </header>
+ 
+    <div class="slider">
+        <div class="slides">
+
+            <!-- Radioo Input Btn-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+
+            <!--Slides-->
+            <div class="slide first">
+                <img src="/assets/img/background-bakery2.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/background-bakery2.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/background-bakery2.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/background-bakery2.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/background-bakery2.jpg" alt="slide1">
+            </div>
+            <!--Navigation auto-->
+            <div class="navgation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+        </div>
+        
+        <!--Navigation manual-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+        </div>
     </div>
 
     <!--Carousel de Aprsentação-->
@@ -1237,38 +1281,6 @@
         </div>
     </section>
 
-
-    
-    <section class="carousel">
-        <div class="carousel-scroll">
-            <div class="carousel-inner">
-                <!--Prato 1-->
-                <div  data-aos="fade-up" class="carousel-item" >
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-                <!--Prato 2-->
-                <div  data-aos="fade-up" class="carousel-item">
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-                <!--Prato 3-->
-                <div  data-aos="fade-up" class="carousel-item" >
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-                <!--Prato 4-->
-                <div  data-aos="fade-up" class="carousel-item" >
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-                <!--Prato 5-->
-                <div  data-aos="fade-up" class="carousel-item" >
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-                <!--Prato 6-->
-                <div  data-aos="fade-up" class="carousel-item" >
-                    <img src="assets/log/brandmini.png" alt="Padoca">
-                </div>
-            </div>
-        </div>
-    </section>
     
     
     <!--Header-->
@@ -1416,6 +1428,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/frontend/js/index.js"></script>
     <script src="/frontend/js/modals/modal.js"></script>
+    <script src="/frontend/js/carousel/slider.js"></script>
     <script src="/frontend/js/faq.js"></script>
     <script>  AOS.init();</script>
 </body>

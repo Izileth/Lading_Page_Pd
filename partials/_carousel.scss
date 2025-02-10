@@ -13,7 +13,7 @@
     background-color: $white-color;
 
     @media screen and (max-width: 991px){
-        height: 100px;
+        height: auto;
         width: 100%;
     }
     .carousel-scroll{
@@ -30,7 +30,7 @@
         -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
 
         @media screen and (max-width: 991px){
-            height: 200px;
+            height: auto;
             width: 100%;
         }
   
@@ -46,7 +46,7 @@
             animation: carousel-words 30s linear infinite;
 
             @media screen and (max-width: 991px){
-                height: 200px;
+                height: auto;
                 width: 100%;
             }
             .carousel-item{
@@ -58,8 +58,16 @@
                 &:hover{
                     transform: scale(1.02);
                 }
+                h2{
+                    font-size: 1.8rem;
+                    color: $orange-color;
+                    text-align: center;
+                    @media screen and (max-width: 991px){
+                        font-size: 1.2rem;
+                    }
+                }
                 @media screen and (max-width: 991px){
-                    height: 200px;
+                    height: auto;
                     width: 100%;
                 }
                 img{

@@ -1,0 +1,38 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+    .social-media{
+        display: flex;
+        gap: 1rem;
+        a{
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover{
+            color: #ff9f43;
+        }
+    }
+    .copyright{
+        color: #fff;
+        font-size: 0.8rem;
+    }
+    .menu{
+        display: flex;
+        gap: 1rem;
+        a{
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover{
+            color: #ff9f43;
+        }
+    }
+}

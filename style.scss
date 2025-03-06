@@ -7,25 +7,56 @@
 @import './partials/_colors.scss';
 @import './partials/_header.scss';
 @import './partials/_layout.scss';
-@import './partials/modal';
+@import './partials/hero';
+@import './partials/footer';
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Major+Mono+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body{
     font-family: "Noto Sans", "Helvetica Neue";
     width: "100%";
     font-optical-sizing: auto;
-    background-color: $white-color;
+    background-color: #000;
     position: relative;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
 }
+h1{
+    color: $color-two;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h2{
+    color: $color-two;
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h3{
+    color: $color-two;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    color: $color-two;
+    font-size: 1.0rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a, button {
+    color: $color-four;
+}
 
 button {
     font-family: "Rubik", sans-serif;
     border: none;
-    background-color: $black-color;
-    color: $white-color;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -40,5 +71,35 @@ img{
 
 a{
     text-decoration: none;
-    color: $white-color;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        color: $color-two;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    h2{
+        color: $color-two;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    h3{
+        color: $color-two;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    p{
+        color: $color-two;
+        font-size: 1.0rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }

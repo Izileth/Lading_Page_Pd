@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendOrderBtn = document.querySelector('.cart-popup-btn .btn');
     
     // Número de WhatsApp do estabelecimento
-    const whatsappNumber = '5511999999999'; // Substitua pelo seu número
+    const whatsappNumber = '5591993961874'; // Substitua pelo seu número
     
     // Carrega o carrinho do localStorage com técnica de debounce para melhorar performance
     let cart = [];

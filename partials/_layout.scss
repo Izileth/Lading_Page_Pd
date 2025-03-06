@@ -1,9 +1,8 @@
-
-$primary-color: #ff5000;
+$primary-color: #ff2626;
 $background-color: #000;
 $text-color: #fff3cd;
 $transition-speed: 0.3s;
-$border-radius: 50%;
+$border-radius: 10px; // Changed from 50% to fix oval issue
 $spacing-sm: 0.8rem;
 $spacing-md: 1.6rem;
 $spacing-lg: 2.4rem;
@@ -29,145 +28,175 @@ $breakpoint-desktop: 1024px;
 
 // Estilos do componente
 .cd-bar {
-  width: 100%;
-  background-color: $background-color;
-  color: $text-color;
-  padding: $spacing-md 0;
-  position: relative;
-  
-  // Esconde a barra de rolagem em todos os navegadores
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  
-  // Container principal
-  .cd-bar-ct {
-    @include flex-column;
-    gap: $spacing-md;
-    padding: 0 $spacing-md;
     width: 100%;
+    background-color: $background-color;
+    color: $text-color;
+    padding: $spacing-md 0;
+    position: relative;
+    overflow: hidden; // Prevent overflow outside container
     
-    // Mobile: scroll horizontal
-    @media (max-width: $breakpoint-tablet) {
-      overflow-x: auto;
-      white-space: nowrap;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    // Desktop: centralizado
-    @media (min-width: $breakpoint-tablet) {
-      @include flex-center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    // Container de imagens
-    .cd-bar-ig {
-      @include flex-row;
-      gap: $spacing-lg;
-      
-      // Mobile: scroll com snap
-      @media (max-width: $breakpoint-tablet) {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        padding-bottom: $spacing-sm;
-      }
-      
-      // Desktop: centralizado
-      @media (min-width: $breakpoint-tablet) {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      
-      // Imagens das categorias
-      img {
-        width: 90px;
-        height: 100px;
-        border-radius: $border-radius;
-        object-fit: cover;
-        transition: all $transition-speed ease;
-        cursor: pointer;
-        border: 3px solid transparent;
+    // Container principal
+    .cd-bar-ct {
+        @include flex-column;
+        gap: $spacing-md;
+        padding: 0 $spacing-md;
+        width: 100%;
         
-        &:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-        
-        &.active {
-          border-color: $primary-color;
-          transform: scale(1.05);
-        }
-        
-        // Desktop: imagens maiores
-        @media (min-width: $breakpoint-tablet) {
-          width: 100px;
-          height: 100px;
-        }
-      }
-    }
-    
-    // Container de texto
-    .cd-bar-it {
-      @include flex-row;
-      gap: $spacing-md;
-      
-      // Mobile: scroll com snap
-      @media (max-width: $breakpoint-tablet) {
-        scroll-snap-align: start;
+        // Mobile: scroll horizontal
+        @media (max-width: $breakpoint-tablet) {
+        overflow-x: auto;
         white-space: nowrap;
-      }
-      
-      // Desktop: centralizado
-      @media (min-width: $breakpoint-tablet) {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      
-      // Items de texto (categorias)
-      span {
-        padding: 8px 15px;
-        cursor: pointer;
-        border-radius: 20px;
-        transition: background-color $transition-speed ease, 
-                    color $transition-speed ease,
-                    transform $transition-speed ease;
-        font-weight: 500;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
         
-        &:hover {
-          background-color: rgba($primary-color, 0.8);
-          transform: translateY(-2px);
+        // Hide scrollbar in all browsers
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
         }
         
-        &.active {
-          background-color: $primary-color;
-          font-weight: 600;
-          transform: translateY(-2px);
+        // Make sure container doesn't have padding at the right edge
+        padding-right: 0;
+        margin-right: $spacing-md;
         }
-      }
+        
+        // Desktop: centralizado
+        @media (min-width: $breakpoint-tablet) {
+        @include flex-center;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+        
+        // Container de imagens
+        .cd-bar-ig {
+        @include flex-row;
+        gap: $spacing-lg;
+        
+        // Mobile: scroll com snap
+        @media (max-width: $breakpoint-tablet) {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            padding-bottom: $spacing-sm;
+            padding-right: $spacing-md; // Add padding to last element
+        }
+        
+        // Desktop: centralizado
+        @media (min-width: $breakpoint-tablet) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        // Imagens das categorias
+        img {
+            width: 90px;
+            height: 90px; // Make height equal to width for circular images
+            border-radius: $border-radius;
+            object-fit: cover;
+            transition: all $transition-speed ease;
+            cursor: pointer;
+            border: 3px solid transparent;
+            aspect-ratio: 1 / 1; // Force aspect ratio to be square
+            
+            &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+            
+            &.active {
+            border-color: $primary-color;
+            transform: scale(1.05);
+            }
+            
+            // Desktop: imagens maiores
+            @media (min-width: $breakpoint-tablet) {
+            width: 100px;
+            height: 100px;
+            }
+        }
+        }
+        
+        // Container de texto
+        .cd-bar-it {
+        @include flex-row;
+        gap: $spacing-md;
+        
+        // Mobile: scroll com snap
+        @media (max-width: $breakpoint-tablet) {
+            scroll-snap-align: start;
+            white-space: nowrap;
+            padding-right: $spacing-md; // Add padding to last element
+        }
+        
+        // Desktop: centralizado
+        @media (min-width: $breakpoint-tablet) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        // Items de texto (categorias)
+        span {
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color $transition-speed ease, 
+                        color $transition-speed ease,
+                        transform $transition-speed ease;
+            font-weight: 500;
+            
+            &:hover {
+            background-color: rgba($primary-color, 0.8);
+            transform: translateY(-2px);
+            }
+            
+            &.active {
+            background-color: $primary-color;
+            font-weight: 600;
+            transform: translateY(-2px);
+            }
+        }
+        }
     }
-  }
-}
+    }
 
-// Animação para indicar scroll disponível
-@media (max-width: $breakpoint-tablet) {
-  .cd-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 40px;
-    background: linear-gradient(to right, transparent, $background-color);
-    pointer-events: none;
-    z-index: 1;
-  }
+    // Animação para indicar scroll disponível
+    @media (max-width: $breakpoint-tablet) {
+    .cd-bar {
+        &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 30px;
+        pointer-events: none;
+        z-index: 1;
+        }
+        
+        // Gradient to indicate more content left
+        &::before {
+        left: 0;
+        background: linear-gradient(to right, $background-color 10%, transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        
+        // Gradient to indicate more content right
+        &::after {
+        right: 0;
+        background: linear-gradient(to left, $background-color 10%, transparent);
+        }
+        
+        // Show left gradient when scrolled right
+        &.scrolled-right::before {
+        opacity: 1;
+        }
+        
+        // Hide right gradient when at the end
+        &.scrolled-end::after {
+        opacity: 0;
+        }
+    }
 }
-
 
 /*Responsividade*/
 /*Seção Main*/
@@ -200,11 +229,10 @@ $breakpoint-desktop: 1024px;
     font-weight: 600;
     text-align: center;
     width: 100%;
-    max-width: 900px;
     line-height: 3.8rem;
     
     /* Aplicar gradiente ao texto */
-    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f, #ff5000, #d6b45d);
+    background: linear-gradient(90deg,#fd0000,#ee0000, #af0000,#fd0000,#bd0000, #af0000,);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text; /* Para compatibilidade com navegadores WebKit */
@@ -393,11 +421,13 @@ $breakpoint-desktop: 1024px;
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #ff0000;
+    text-align: left;
 }
 
 .card-text {
-    color: #666;
+    color: #282828;
+    text-align: left;
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
@@ -405,13 +435,16 @@ $breakpoint-desktop: 1024px;
 .card-price {
     font-weight: bold;
     font-size: 1.4rem;
-    color: #ff5000;
+    color: #ff0500;
     margin-bottom: 15px;
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background-color: #fff3cd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     align-items: center;
     padding: 10px 15px;
 }
@@ -426,13 +459,13 @@ $breakpoint-desktop: 1024px;
 }
 
 .btn-fav {
-    background-color: #eb0000;
-    color: white;
+    background: #f50000;
+    color: #fff;
     padding: 0.8rem 1rem;
 }
 
 .btn-fav:hover {
-    background-color: #af0000;
+    background-color: #27ae60;
 }
 
 .btn.fa-heart {
@@ -722,10 +755,6 @@ $breakpoint-desktop: 1024px;
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-    
     .cart-popup-content {
         width: 95%;
         max-height: 90vh;

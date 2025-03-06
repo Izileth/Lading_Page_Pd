@@ -130,44 +130,43 @@ function adicionarEfeitosNosBotoes() {
 
 // Função para mostrar modal de contato
 function mostrarModalContato() {
-    // Verificar se o modal já existe
     let modal = document.getElementById('modal-contato');
-    
+
     if (!modal) {
-        // Criar modal
-        modal = document.createElement('div');
-        modal.id = 'modal-contato';
-        modal.className = 'modal';
-        
-        modal.innerHTML = `
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Entre em Contato</h2>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">WhatsApp</a>
-                </div>
-            </div>
-        `;
-        
-        document.body.appendChild(modal);
-        
-        // Adicionar evento de fechar
-        modal.querySelector('.close-modal').addEventListener('click', () => {
-            modal.classList.remove('show-modal');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-        });
+        // Se não existir, pegar o modal do HTML e exibir
+        modal = document.getElementById('modal');
+        modal.id = 'modal-contato'; // Definir ID correto
     }
-    
+
     // Exibir modal com animação
     modal.style.display = 'block';
     setTimeout(() => {
         modal.classList.add('show-modal');
     }, 10);
+
+    // Adicionar evento de fechar (se ainda não estiver adicionado)
+    const closeModal = modal.querySelector('.close-modal');
+    if (!closeModal.dataset.listener) {
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show-modal');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+        closeModal.dataset.listener = "true"; // Evita múltiplos eventos
+    }
+
+    // Fecha ao clicar fora do modal
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show-modal');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+    }, { once: true });
 }
+
 
 // Função para rolar até a seção de menu
 function scrollParaMenu() {

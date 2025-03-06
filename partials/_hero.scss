@@ -116,8 +116,8 @@
                 text-decoration: none;
                 transition: all 0.3s ease;
                 &:hover{
-                    background-color: #fd9c00;
-                    color: #000;
+                    background-color: #ff2626;
+                    color: #fff;
                     font-weight: 600;
                 }
             }
@@ -183,7 +183,7 @@
 }
 
 .status-fechado {
-    background-color: #fd9c00;
+    background-color: #ff2626;
     color: white;
 }
 
@@ -204,7 +204,7 @@
     font-size: 0.85em;
     color: #fff;
     padding: 0.6rem 1rem;
-    background-color: #4CAF50;
+    background-color: #ff5000;
     text-align: center;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -294,7 +294,7 @@
 }
 
 .close-modal {
-    color: #aaa;
+    color: #000;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -303,30 +303,66 @@
 }
 
 .close-modal:hover {
-    color: #333;
+    color: #ff2626;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
     margin-top: 20px;
 }
 
-.social-icon {
-    padding: 8px 15px;
-    background-color: #ff5000;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.2s ease;
+.social-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.6rem;
+    .social-inputs{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 1rem;
+        input{
+            padding: 0.6rem;
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100%;
+            transition: border-color 0.2s ease;
+            &:focus{
+                border-color: #ff2626;
+            }
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                color: #000;
+            }
+        }
+    }
+    button{
+        padding: 0.6rem 2.6rem;
+        background-color: #ff2626;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        &:hover{
+            background-color: #3e8e41;
+        }
+    }
 }
 
-.social-icon:hover {
-    background-color: #4CAF50;
-    transform: translateY(-2px);
+.success{
+    font-size: 1.0rem;
+    color: #3e8e41;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
-
 /* Estilo para toast notifications */
 .toast {
     position: fixed;

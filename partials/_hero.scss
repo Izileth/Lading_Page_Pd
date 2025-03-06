@@ -102,10 +102,6 @@
             justify-content: center;
             gap: 0.4rem;
 
-            .hr-sc-if {
-                z-index: 2;
-            }
-
             a {
                 font-size: 1.5rem;
                 padding: 0.8rem;
@@ -119,6 +115,10 @@
                     background-color: #ff2626;
                     color: #fff;
                     font-weight: 600;
+                }
+                @media screen and (max-width: 416px){
+                    padding: 0.6rem 0.8rem;
+                    font-size: 1.0rem;
                 }
             }
         }
@@ -153,20 +153,82 @@
     }
 }
 
+@media screen and (max-width: 416px){
+    .hero {
+        height: 100vh;
+        .bg-hr{
+            height: 100vh;
+            .hr-ct-md {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hr-ct-md {
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+    
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    height: auto;
+                    border-radius: 50%;
+                }
+            }
+            .hr-ct {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                h1{
+                    margin: 0;
+                    font-size: 1.6rem;
+                }
+    
+                .hr-sc-hr {
+                    margin-top: 1rem;
+                    p{
+                        font-size: 0.9rem;
+                        padding: 0.4rem 0.8rem;
+                        margin: 0;
+                    }
+                }
+    
+                .hr-sc {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    
+    }
+}
+
 .hr-sc-hr p {
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    @media screen and (max-width: 416px){
+        padding: 0.4rem 0.8rem;
+        font-size: 1.0rem;
+    }
 }
 
 .hr-sc-hr p.aberto {
     color: #4CAF50;
+    @media screen and (max-width: 416px){
+        padding: 0.4rem 0.8rem;
+        font-size: 1.0rem;
+    }
 }
 
 .hr-sc-hr p.fechado {
     color: #ff2626;
+    @media screen and (max-width: 416px){
+        padding: 0.4rem 0.8rem;
+        font-size: 1.0rem;
+    }
 }
 
 .status-aberto, .status-fechado {
@@ -208,17 +270,18 @@
     text-align: center;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-style: italic;
+    @media screen and (max-width: 416px){
+        padding: 0.4rem 0.8rem;
+        font-size: 1.0rem;
+    }
 }
 
 /* Estilos para os botões */
 .hr-sc-if a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px 20px;
     border-radius: 5px;
     background-color: #f8f8f8;
-    color: #333;
     font-weight: bold;
     transition: all 0.3s ease;
     border: 2px solid transparent;

@@ -270,6 +270,19 @@ header .nav .cart-popup.active {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 416px) {
+  header .nav {
+    align-items: center;
+    text-align: center;
+  }
+  header .nav .logo {
+    align-items: center;
+    text-align: center;
+  }
+  header .nav .logo p {
+    font-size: 1rem;
+  }
+}
 .cd-bar {
   width: 100%;
   background-color: #000;
@@ -1078,9 +1091,6 @@ header .nav .cart-popup.active {
   justify-content: center;
   gap: 0.4rem;
 }
-.hero .bg-hr .hr-sc .hr-sc-if {
-  z-index: 2;
-}
 .hero .bg-hr .hr-sc a {
   font-size: 1.5rem;
   padding: 0.8rem;
@@ -1095,6 +1105,12 @@ header .nav .cart-popup.active {
   background-color: #ff2626;
   color: #fff;
   font-weight: 600;
+}
+@media screen and (max-width: 416px) {
+  .hero .bg-hr .hr-sc a {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
 }
 
 /* Responsividade */
@@ -1118,6 +1134,51 @@ header .nav .cart-popup.active {
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 416px) {
+  .hero {
+    height: 100vh;
+  }
+  .hero .bg-hr {
+    height: 100vh;
+  }
+  .hero .bg-hr .hr-ct-md {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero .bg-hr .hr-ct-md {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  .hero .bg-hr .hr-ct-md img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+  }
+  .hero .bg-hr .hr-ct {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .hero .bg-hr .hr-ct h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .hero .bg-hr .hr-ct .hr-sc-hr {
+    margin-top: 1rem;
+  }
+  .hero .bg-hr .hr-ct .hr-sc-hr p {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0;
+  }
+  .hero .bg-hr .hr-ct .hr-sc {
+    margin-top: 1rem;
+  }
+}
 .hr-sc-hr p {
   transition: all 0.3s ease;
   display: flex;
@@ -1125,13 +1186,31 @@ header .nav .cart-popup.active {
   justify-content: center;
   gap: 10px;
 }
+@media screen and (max-width: 416px) {
+  .hr-sc-hr p {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+}
 
 .hr-sc-hr p.aberto {
   color: #4CAF50;
 }
+@media screen and (max-width: 416px) {
+  .hr-sc-hr p.aberto {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+}
 
 .hr-sc-hr p.fechado {
   color: #ff2626;
+}
+@media screen and (max-width: 416px) {
+  .hr-sc-hr p.fechado {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
 }
 
 .status-aberto, .status-fechado {
@@ -1172,17 +1251,20 @@ header .nav .cart-popup.active {
   text-align: center;
   border-radius: 6px;
   margin-bottom: 20px;
-  font-style: italic;
+}
+@media screen and (max-width: 416px) {
+  .tempo-restante {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
 }
 
 /* Estilos para os botões */
 .hr-sc-if a {
   display: inline-block;
   text-decoration: none;
-  padding: 10px 20px;
   border-radius: 5px;
   background-color: #f8f8f8;
-  color: #333;
   font-weight: bold;
   transition: all 0.3s ease;
   border: 2px solid transparent;

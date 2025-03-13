@@ -192,60 +192,86 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Adicionar evento de clique para adicionar ao carrinho usando delegação de eventos
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-fav') || e.target.closest('.btn-fav')) {
             const button = e.target.classList.contains('btn-fav') ? e.target : e.target.closest('.btn-fav');
             e.preventDefault();
-            
+    
             const card = button.closest('.card');
             const productId = parseInt(card.dataset.id);
             const product = products.find(p => p.id === productId);
-            
+    
             if (product) {
                 const existingItem = cart.find(item => item.id === product.id);
-                
+    
                 if (existingItem) {
                     existingItem.quantity += 1;
                 } else {
                     cart.push({ ...product, quantity: 1 });
                 }
-                
+    
                 saveCart();
                 updateCartCount();
                 showNotification(`${product.name} adicionado ao carrinho!`);
-                
-                // Animação do item voando para o carrinho
-                const productImg = card.querySelector('img');
-                if (productImg) {
-                    const flyingImg = productImg.cloneNode();
-                    const rect = productImg.getBoundingClientRect();
-                    const cartIcon = document.querySelector('.cart-icon');
-                    const cartRect = cartIcon.getBoundingClientRect();
-                    
-                    flyingImg.style.position = 'fixed';
-                    flyingImg.style.width = '50px';
-                    flyingImg.style.left = `${rect.left}px`;
-                    flyingImg.style.top = `${rect.top}px`;
-                    flyingImg.style.zIndex = '9999';
-                    flyingImg.style.transition = 'all 0.8s ease-in-out';
-                    
-                    document.body.appendChild(flyingImg);
-                    
-                    setTimeout(() => {
-                        flyingImg.style.transform = 'scale(0.5)';
-                        flyingImg.style.left = `${cartRect.left}px`;
-                        flyingImg.style.top = `${cartRect.top}px`;
-                        flyingImg.style.opacity = '0.5';
-                        
-                        flyingImg.addEventListener('transitionend', () => {
-                            flyingImg.remove();
-                        }, { once: true });
-                    }, 10);
-                }
+    
+                // Disparar a animação do item voando para o carrinho
+                animateToCart(card);
             }
         }
     });
+    
+    function animateToCart(card) {
+        const productImg = card.querySelector('img');
+        const cartIcon = document.querySelector('.cart-icon');
+    
+        if (!productImg || !cartIcon) return;
+    
+        const rect = productImg.getBoundingClientRect();
+        const cartRect = cartIcon.getBoundingClientRect();
+    
+        // Criar um elemento voador
+        const flyingIcon = document.createElement('div');
+        flyingIcon.style.position = 'fixed';
+        flyingIcon.style.width = '40px';
+        flyingIcon.style.height = '40px';
+        flyingIcon.style.borderRadius = '50%';
+        flyingIcon.style.overflow = 'hidden';
+        flyingIcon.style.display = 'flex';
+        flyingIcon.style.alignItems = 'center';
+        flyingIcon.style.justifyContent = 'center';
+        flyingIcon.style.left = `${rect.left}px`;
+        flyingIcon.style.top = `${rect.top}px`;
+        flyingIcon.style.zIndex = '9999';
+        flyingIcon.style.transition = 'all 0.8s ease-in-out, opacity 0.4s ease';
+    
+        // Escolher entre um ícone ou uma imagem redonda
+        if (productImg.src) {
+            const flyingImg = document.createElement('img');
+            flyingImg.src = productImg.src;
+            flyingImg.style.width = '100%';
+            flyingImg.style.height = '100%';
+            flyingImg.style.objectFit = 'cover';
+            flyingIcon.appendChild(flyingImg);
+        } else {
+            flyingIcon.innerHTML = '🛒'; // Ícone de carrinho como alternativa
+            flyingIcon.style.fontSize = '24px';
+            flyingIcon.style.background = '#fff';
+        }
+    
+        document.body.appendChild(flyingIcon);
+    
+        setTimeout(() => {
+            flyingIcon.style.transform = 'scale(0.5)';
+            flyingIcon.style.left = `${cartRect.left + cartRect.width / 2 - 20}px`;
+            flyingIcon.style.top = `${cartRect.top + cartRect.height / 2 - 20}px`;
+            flyingIcon.style.opacity = '0';
+    
+            flyingIcon.addEventListener('transitionend', () => {
+                flyingIcon.remove();
+            }, { once: true });
+        }, 10);
+    }
+    
     
     // Abrir modal do carrinho ao clicar em qualquer ícone de carrinho
     cartIcons.forEach(cartIcon => {

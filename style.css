@@ -11,11 +11,11 @@ header {
   max-width: 100vw;
   width: 100%;
   height: clamp(60px, 10vh, 100px);
-  background: #121212;
-  color: #4A4A4A;
+  color: #000;
   top: 0;
   z-index: 1000;
   position: fixed;
+  background-color: #fff;
 }
 header .nav {
   display: flex;
@@ -37,19 +37,21 @@ header .nav .menu ul {
   gap: 20px;
 }
 header .nav .menu ul li a {
-  color: #fff;
+  color: #000;
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 header .nav .menu ul li a:hover {
-  color: #f26500;
+  color: #ff4ae7;
 }
 header .nav .menu .cart-icon {
   font-size: 1.2rem;
   cursor: pointer;
-  background-color: #f26500;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  animation: gradientFlow 5s linear infinite;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -62,7 +64,7 @@ header .nav .menu .cart-icon {
 header .nav .menu .cart-icon:hover {
   transform: scale(1.05);
   background-color: #fff;
-  color: #000;
+  color: rgb(231, 231, 231);
 }
 header .nav .logo {
   cursor: pointer;
@@ -80,16 +82,14 @@ header .nav .logo img {
   border-radius: 50%;
 }
 header .nav .logo p {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 1.5rem;
   font-weight: 600;
-  /* Aplicar gradiente ao texto */
-  background: linear-gradient(90deg, #FFF8E1, #B8E0D0, #FADADD, #FFF8E1, #B8E0D0, #FADADD);
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
   background-size: 200% auto;
   background-clip: text;
-  -webkit-background-clip: text; /* Para compatibilidade com navegadores WebKit */
-  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
-  /* Animação do gradiente */
+  -webkit-background-clip: text;
+  color: transparent;
   animation: gradientFlow 5s linear infinite;
 }
 header .nav .logo:hover {
@@ -98,7 +98,7 @@ header .nav .logo:hover {
 header .nav .icon-menu, header .nav .icon-close {
   font-size: 1.5rem;
   cursor: pointer;
-  color: #fff;
+  color: #000;
   display: none;
   transition: opacity 0.3s ease;
 }
@@ -111,7 +111,7 @@ header .nav .menu-mobile {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #000;
   padding: 20px;
   z-index: 999;
   opacity: 0;
@@ -126,7 +126,7 @@ header .nav .menu-mobile ul {
   gap: 15px;
 }
 header .nav .menu-mobile ul li a {
-  color: #FFF8E1;
+  color: #000;
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease;
@@ -159,7 +159,7 @@ header .nav .cart-popup {
 header .nav .cart-popup .cart-popup-ct h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #FFF8E1;
+  color: #000;
 }
 header .nav .cart-popup .cart-popup-ct .cart-popup-items p {
   color: #666;
@@ -237,7 +237,9 @@ header .nav .cart-popup.active {
   header .nav .icons-mobile .cart-icon {
     font-size: 1.2rem;
     cursor: pointer;
-    background-color: #f26500;
+    background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+    background-size: 200% auto;
+    animation: gradientFlow 5s linear infinite;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -255,7 +257,7 @@ header .nav .cart-popup.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #121212;
+    background-color: #fff;
     justify-content: center;
   }
   header .nav .menu-mobile ul {
@@ -266,7 +268,7 @@ header .nav .cart-popup.active {
     gap: 10px;
   }
   header .nav .menu-mobile ul li a {
-    color: #fff;
+    color: #000;
     font-size: 1rem;
   }
 }
@@ -357,7 +359,7 @@ header .nav .cart-popup.active {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 .cd-bar .cd-bar-ct .cd-bar-ig img.active {
-  border-color: #ff2626;
+  border-color: #ff00ff;
   transform: scale(1.05);
 }
 @media (min-width: 768px) {
@@ -392,11 +394,11 @@ header .nav .cart-popup.active {
   font-weight: 500;
 }
 .cd-bar .cd-bar-ct .cd-bar-it span:hover {
-  background-color: rgba(255, 38, 38, 0.8);
+  background-color: rgba(255, 0, 255, 0.8);
   transform: translateY(-2px);
 }
 .cd-bar .cd-bar-ct .cd-bar-it span.active {
-  background-color: #ff2626;
+  background-color: #ff00ff;
   font-weight: 600;
   transform: translateY(-2px);
 }
@@ -437,7 +439,7 @@ header .nav .cart-popup.active {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background-color: #fff3cd;
+  background-color: #fff;
   margin-top: 20px;
   width: 100%;
 }
@@ -461,13 +463,11 @@ header .nav .cart-popup.active {
   text-align: center;
   width: 100%;
   line-height: 3.8rem;
-  /* Aplicar gradiente ao texto */
-  background: linear-gradient(90deg, #fd0000, #ee0000, #af0000, #fd0000, #bd0000, #af0000);
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
   background-size: 200% auto;
   background-clip: text;
-  -webkit-background-clip: text; /* Para compatibilidade com navegadores WebKit */
-  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
-  /* Animação do gradiente */
+  -webkit-background-clip: text;
+  color: transparent;
   animation: gradientFlow 5s linear infinite;
 }
 
@@ -607,7 +607,7 @@ header .nav .cart-popup.active {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #e74c3c;
+  background-color: #ff3281;
   color: white;
   border-radius: 50%;
   width: 20px;
@@ -650,8 +650,13 @@ header .nav .cart-popup.active {
   font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ff0000;
   text-align: left;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientFlow 5s linear infinite;
 }
 
 .card-text {
@@ -664,18 +669,23 @@ header .nav .cart-popup.active {
 .card-price {
   font-weight: bold;
   font-size: 1.4rem;
-  color: #ff0500;
   margin-bottom: 15px;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientFlow 5s linear infinite;
 }
 
 .card-footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: #fff3cd;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   align-items: center;
   padding: 10px 15px;
+  border-radius: 2px;
 }
 
 .btn {
@@ -688,13 +698,17 @@ header .nav .cart-popup.active {
 }
 
 .btn-fav {
-  background: #f50000;
   color: #fff;
+  font-size: 1rem;
   padding: 0.8rem 1rem;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  animation: gradientFlow 5s linear infinite;
+  transition: transform 0.3s ease;
 }
 
 .btn-fav:hover {
-  background-color: #27ae60;
+  transform: translateY(-2px);
 }
 
 .btn.fa-heart {
@@ -887,12 +901,12 @@ header .nav .cart-popup.active {
 }
 
 .btn-cancel {
-  background-color: #f0f0f0;
-  color: #777;
+  background-color: #f50000;
+  color: #fff;
 }
 
 .btn-cancel:hover {
-  background-color: #e0e0e0;
+  background-color: #c20000;
 }
 
 /* Produtos relacionados */
@@ -1006,7 +1020,7 @@ header .nav .cart-popup.active {
   position: relative;
 }
 .hero .bg-hr {
-  background-image: url("/assets/img/background/Bk1.jpg");
+  background-image: url("../assets/img/background/Bk.A.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1052,6 +1066,11 @@ header .nav .cart-popup.active {
   max-width: 150px;
   height: auto;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out, all 0.3s ease-in-out;
+}
+.hero .bg-hr .hr-ct-md img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 .hero .bg-hr .hr-ct {
   color: #fff;
@@ -1062,6 +1081,12 @@ header .nav .cart-popup.active {
 .hero .bg-hr .hr-ct h1 {
   margin: 0;
   font-size: 3.8rem;
+  background: linear-gradient(90deg, #ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientFlow 5s linear infinite;
 }
 .hero .bg-hr .hr-ct .hr-sc-hr {
   margin: 0 auto;
@@ -1069,13 +1094,12 @@ header .nav .cart-popup.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 }
 .hero .bg-hr .hr-ct .hr-sc-hr .hr-it {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 0.8rem;
   border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -1083,6 +1107,11 @@ header .nav .cart-popup.active {
   flex-direction: column;
   color: #fff;
   font-weight: bold;
+}
+@media screen and (max-width: 416px) {
+  .hero .bg-hr .hr-ct .hr-sc-hr .hr-it {
+    font-size: 1.4rem;
+  }
 }
 .hero .bg-hr .hr-sc {
   margin: 0 auto;
@@ -1093,17 +1122,17 @@ header .nav .cart-popup.active {
 }
 .hero .bg-hr .hr-sc a {
   font-size: 1.5rem;
-  padding: 0.8rem;
+  padding: 0.4rem 2.4rem;
   border-radius: 6px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 .hero .bg-hr .hr-sc a:hover {
-  background-color: #ff2626;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-weight: 600;
 }
 @media screen and (max-width: 416px) {
@@ -1165,7 +1194,7 @@ header .nav .cart-popup.active {
   }
   .hero .bg-hr .hr-ct h1 {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
   .hero .bg-hr .hr-ct .hr-sc-hr {
     margin-top: 1rem;
@@ -1194,7 +1223,7 @@ header .nav .cart-popup.active {
 }
 
 .hr-sc-hr p.aberto {
-  color: #4CAF50;
+  color: #000;
 }
 @media screen and (max-width: 416px) {
   .hr-sc-hr p.aberto {
@@ -1215,20 +1244,24 @@ header .nav .cart-popup.active {
 
 .status-aberto, .status-fechado {
   font-size: 0.8em;
-  padding: 3px 8px;
+  padding: 0.4rem 1rem;
   border-radius: 20px;
   font-weight: bold;
   animation: pulse 2s infinite;
 }
 
 .status-aberto {
-  background-color: #4CAF50;
-  color: white;
+  background: linear-gradient(90deg, #ffdb67, #4bffb7, #ff5667, hsl(46, 100%, 70%), #5affbd, #ff384c);
+  background-size: 200% auto;
+  animation: gradientFlow 5s linear infinite;
+  color: rgb(255, 255, 255);
 }
 
 .status-fechado {
-  background-color: #ff2626;
-  color: white;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  animation: gradientFlow 5s linear infinite;
+  color: rgb(255, 255, 255);
 }
 
 @keyframes pulse {
@@ -1247,10 +1280,10 @@ header .nav .cart-popup.active {
   font-size: 0.85em;
   color: #fff;
   padding: 0.6rem 1rem;
-  background-color: #ff5000;
   text-align: center;
   border-radius: 6px;
-  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 416px) {
   .tempo-restante {
@@ -1408,7 +1441,7 @@ header .nav .cart-popup.active {
 
 .success {
   font-size: 1rem;
-  color: #3e8e41;
+  color: #fff;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -1440,17 +1473,21 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
+  background-color: #fff;
   gap: 1.5rem;
   width: 100%;
   padding: 2rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+footer p {
+  color: #000;
 }
 footer .social-media {
   display: flex;
   gap: 1rem;
 }
 footer .social-media a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -1458,7 +1495,7 @@ footer .social-media a:hover {
   color: #ff9f43;
 }
 footer .copyright {
-  color: #fff;
+  color: #000;
   font-size: 0.8rem;
 }
 footer .menu {
@@ -1466,12 +1503,20 @@ footer .menu {
   gap: 1rem;
 }
 footer .menu a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 footer .menu a:hover {
   color: #ff9f43;
+}
+@media screen and (max-width: 600px) {
+  footer .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+  }
 }
 
 body {

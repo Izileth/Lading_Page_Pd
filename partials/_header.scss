@@ -74,10 +74,15 @@ header {
             justify-items: center;
             gap: 0.6rem;
             transition: opacity 0.3s ease;  
-            img{
+            .lg-it{
                 width: 40px;
-                object-fit: cover;
+                height: 40px;
+                -o-object-fit: cover;
+                 object-fit: cover;
                 border-radius: 50%;
+                background: linear-gradient(90deg,#ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+                background-size: 200% auto;
+                animation: gradientFlow 5s linear infinite;
             }
             p{
                 margin-top: 15px;

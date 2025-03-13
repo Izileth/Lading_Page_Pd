@@ -75,11 +75,15 @@ header .nav .logo {
   gap: 0.6rem;
   transition: opacity 0.3s ease;
 }
-header .nav .logo img {
+header .nav .logo .lg-it {
   width: 40px;
+  height: 40px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
+  background: linear-gradient(90deg, #ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+  background-size: 200% auto;
+  animation: gradientFlow 5s linear infinite;
 }
 header .nav .logo p {
   margin-top: 15px;
@@ -1061,6 +1065,22 @@ header .nav .cart-popup.active {
   justify-content: center;
   gap: 0.4rem;
 }
+.hero .bg-hr .hr-ct-md .hr-ct-md-it {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(90deg, #ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+  background-size: 400% auto;
+  animation: gradientFlow 5s linear infinite;
+  border-radius: 50%;
+}
+@media screen and (max-width: 416px) {
+  .hero .bg-hr .hr-ct-md .hr-ct-md-it {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(90deg, #ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+    background-size: 200% auto;
+  }
+}
 .hero .bg-hr .hr-ct-md img {
   width: 100%;
   max-width: 150px;
@@ -1094,7 +1114,6 @@ header .nav .cart-popup.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
 }
 .hero .bg-hr .hr-ct .hr-sc-hr .hr-it {
   font-size: 1.8rem;

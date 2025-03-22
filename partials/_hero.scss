@@ -6,7 +6,7 @@
     position: relative;
 
     .bg-hr {
-        background-image: url( '../assets/img/background/Bk.A.jpg');
+        background-image: url("../assets//img/background/bk1.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -55,14 +55,14 @@
             .hr-ct-md-it{
                 width: 150px;
                 height: 150px;
-                background: linear-gradient(90deg,#ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+                background: var(--gradient-background-ultradark);
                 background-size: 400% auto;
                 animation: gradientFlow 5s linear infinite;
                 border-radius: 50%;
                 @media screen and (max-width: 416px){
                     width: 100px;
                     height: 100px;
-                    background: linear-gradient(90deg,#ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+                    background: var(--gradient-background-ultradark);
                     background-size: 200% auto;
                 }
             }
@@ -81,7 +81,7 @@
         }
 
         .hr-ct {
-            color: #fff;
+            color:#fff;
             font-size: 2rem;
             text-align: center;
             font-weight: bold;
@@ -89,7 +89,7 @@
             h1 {
                 margin: 0;
                 font-size: 3.8rem;
-                background: linear-gradient(90deg,#ffe17d, #82ffcd, #ff7987, hsl(46, 100%, 75%), #84ffce, #ff6c7b);
+                background: var(--gradient-background);
                 background-size: 200% auto;
                 background-clip: text;
                 -webkit-background-clip: text; 
@@ -267,10 +267,10 @@
 }
 
 .status-aberto {
-    background: linear-gradient(90deg,#ffdb67, #4bffb7, #ff5667, hsl(46, 100%, 70%), #5affbd, #ff384c);
+    background: var( --gradient-background-ultradark);
     background-size: 200% auto;
     animation: gradientFlow 5s linear infinite;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 
 .status-fechado {

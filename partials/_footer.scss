@@ -3,19 +3,20 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--background);
     gap: 1.5rem;
     width: 100%;
     padding: 2rem;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
     p{
-        color: #000;
+        color: var(--primary-color);
     }
+
     .social-media{
         display: flex;
         gap: 1rem;
         a{
-            color: #000;
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -24,14 +25,14 @@ footer{
         }
     }
     .copyright{
-        color: #000;
+        color: var(--primary-color);
         font-size: 0.8rem;
     }
     .menu{
         display: flex;
         gap: 1rem;
         a{
-            color: #000;
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }

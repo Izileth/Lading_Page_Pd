@@ -1,6 +1,6 @@
-$primary-color: #ff00ff;
+$primary-color: #fff;
 $background-color: #000;
-$text-color: #fff3cd;
+$text-color: #000;
 $transition-speed: 0.3s;
 $border-radius: 10px; // Changed from 50% to fix oval issue
 $spacing-sm: 0.8rem;
@@ -104,7 +104,8 @@ $breakpoint-desktop: 1024px;
             }
             
             &.active {
-            border-color: $primary-color;
+            border-color:var(--gradient-background);
+            ;
             transform: scale(1.05);
             }
             
@@ -125,7 +126,7 @@ $breakpoint-desktop: 1024px;
         @media (max-width: $breakpoint-tablet) {
             scroll-snap-align: start;
             white-space: nowrap;
-            padding-right: $spacing-md; // Add padding to last element
+            padding-right: $spacing-md; 
         }
         
         // Desktop: centralizado
@@ -145,12 +146,12 @@ $breakpoint-desktop: 1024px;
             font-weight: 500;
             
             &:hover {
-            background-color: rgba($primary-color, 0.8);
+            background-color: var(--secondary-color);
             transform: translateY(-2px);
             }
             
             &.active {
-            background-color: $primary-color;
+            background-color: var(--secondary-color);
             font-weight: 600;
             transform: translateY(-2px);
             }
@@ -207,7 +208,7 @@ $breakpoint-desktop: 1024px;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color:var(--background);
     margin-top: 20px;
     width: 100%;
 }
@@ -230,7 +231,7 @@ $breakpoint-desktop: 1024px;
     text-align: center;
     width: 100%;
     line-height: 3.8rem;
-    background: linear-gradient(90deg,#ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+    background: var( --gradient-background-ultradark);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -374,8 +375,8 @@ $breakpoint-desktop: 1024px;
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #ff3281;
-    color: white;
+    background-color: var(--background);
+    color: var(--primary-color);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -418,7 +419,7 @@ $breakpoint-desktop: 1024px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: left;
-    background: linear-gradient(90deg,#ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+    background: var( --gradient-background-ultradark);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -427,7 +428,7 @@ $breakpoint-desktop: 1024px;
 }
 
 .card-text {
-    color: #282828;
+    color: var(--primary-color);
     text-align: left;
     font-size: 1.1rem;
     margin-bottom: 15px;
@@ -437,7 +438,7 @@ $breakpoint-desktop: 1024px;
     font-weight: bold;
     font-size: 1.4rem;
     margin-bottom: 15px;
-    background: linear-gradient(90deg,#ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+    background: var( --gradient-background-ultradark);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -465,10 +466,10 @@ $breakpoint-desktop: 1024px;
 }
 
 .btn-fav {
-    color: #fff;
+    color: var(--background);
     font-size: 1.0rem;
     padding: 0.8rem 1rem;
-    background: linear-gradient(90deg,#ff7dde, #c582ff, #aa79ff, hsl(305, 100%, 75%), #ff84bf, #a26cff);
+    background: var( --gradient-background-ultradark);
     background-size: 200% auto;
     animation: gradientFlow 5s linear infinite;
     transition: transform 0.3s ease;
@@ -480,7 +481,7 @@ $breakpoint-desktop: 1024px;
 
 .btn.fa-heart {
     background: none;
-    color: #aaa;
+    color: var(--secondary-color);
     font-size: 20px;
 }
 
@@ -512,7 +513,7 @@ $breakpoint-desktop: 1024px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f0f0f0;
+    background-color: var(--background);
     padding: 20px;
     border-radius: 8px;
     width: 90%;
@@ -534,7 +535,7 @@ $breakpoint-desktop: 1024px;
 .cart-popup-title {
     font-size: 20px;
     font-weight: bold;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .close-cart {
@@ -542,7 +543,7 @@ $breakpoint-desktop: 1024px;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .cart-popup-items {
@@ -561,13 +562,13 @@ $breakpoint-desktop: 1024px;
 }
 
 .item-details {
-    color: #000;
+    color: var(--primary-color);
     flex-grow: 1;
 }
 
 .item-name {
     font-weight: bold;
-    color: #000;
+    color: var(--primary-color);
     text-align: left;
     margin-bottom: 5px;
 }
@@ -583,7 +584,7 @@ $breakpoint-desktop: 1024px;
     background-position: center;
 }
 .item-price, .item-subtotal {
-    color: #666;
+    color: var(--primary-color);
     text-align: left;
     font-size: 14px;
     margin-bottom: 5px;
@@ -600,37 +601,38 @@ $breakpoint-desktop: 1024px;
     width: 25px;
     height: 38px;
     border-radius: 50%;
-    background-color: #ddd;
-    border: 1px solid #ddd;
+    background-color: var(--background);
+    border: 1px solid var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-weight: bold;
-    color: #000;
+    color: #ccc
 }
 
 .quantity-decrease:hover, .quantity-increase:hover {
-    background-color: #ff5000;
+    background-color: var(--primary-color);
 }
 
 .remove-item {
-    background-color: #f0f0f0;
+    background-color: var(--background);
     border: none;
     padding: 0.6rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
-    color: #e74c3c;
+    color: #ff0500;
 }
 
 .remove-item:hover {
     background-color: #f50000;
-    color: #000;
+    color: var(--secondary-color);
 }
 
 .cart-total {
-    background-color: #27ae60;
+    background-color: #00c251;
+    color: var(--secondary-color);
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -642,7 +644,7 @@ $breakpoint-desktop: 1024px;
 }
 
 .cart-total p {
-    color: #000;
+    color: var(--secondary-color);
     margin-bottom: 5px;
     font-size: 16px;
 }
@@ -668,7 +670,7 @@ $breakpoint-desktop: 1024px;
 
 .btn-cancel {
     background-color: #f50000;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .btn-cancel:hover {
@@ -721,15 +723,15 @@ $breakpoint-desktop: 1024px;
 .add-related-btn {
     padding: 5px 10px;
     border: none;
-    background-color: #2ecc71;
-    color: white;
+    background-color: #00d057;
+    color: var(--secondary-color);
     border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
 }
 
 .add-related-btn:hover {
-    background-color: #27ae60;
+    background-color: #00d057;
 }
 
 /* Notificações */
@@ -738,8 +740,8 @@ $breakpoint-desktop: 1024px;
     bottom: 20px;
     right: 20px;
     padding: 15px 20px;
-    background-color: #2ecc71;
-    color: white;
+    background-color: #00c251;
+    color: var(--secondary-color);
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1001;

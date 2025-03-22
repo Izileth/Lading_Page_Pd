@@ -1,18 +1,18 @@
-// Cores Primarias
 
-$background-one: #000 ;
-$background-two: #fff;
-$background-three: #000;
+// Modo Claro
+[data-theme="light"] {
+    --background: #ffffff;
+    --primary-color:#080808 ;
+    --secondary-color: #f0f0f0;
+    --gradient-background: linear-gradient(90deg, #f8e1db, #f5f5dc, #ffffff, #ffebcd, #f4c2c2);
+    --gradient-background-ultradark: linear-gradient(90deg, #0a0302, #26120e, #3e2723, #5d4037, #8d6e63);
+}
 
-//Cores de Texto
-$color-one: #000 ;
-$color-two: #fff;
-$color-three: #00d432;
-$color-four: #e3ef26;
-
-// Cores de Botões
-$button-color-one: #00d432;
-$button-color-two: #fff;
-$button-color-three: #076653;
-$button-color-four: #e3ef26;
-
+// Modo Escuro
+[data-theme="dark"] {
+    --background: #080808;
+    --primary-color:#f6f6f6;
+    --secondary-color: #fffff;
+    --gradient-background: linear-gradient(90deg, #2c0b0e, #4a1c1f, #942c2f, #d4af37, #8f0000e3);
+    --gradient-background-ultradark: linear-gradient(90deg, #2c0b0e, #941b23, #5d2d2f, #d4af37, #8f0000e3);
+}

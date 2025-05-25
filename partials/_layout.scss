@@ -26,6 +26,17 @@ $breakpoint-desktop: 1024px;
     flex-direction: row;
 }
 
+html{
+    background-color: var(--background);
+    color: var(--primary-color);
+}
+
+body{
+    background-color: var(--background);
+    color: var(--primary-color);
+}
+
+
 // Estilos do componente
 .cd-bar {
     width: 100%;
